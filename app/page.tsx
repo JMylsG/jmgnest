@@ -274,7 +274,7 @@ export default function HomePage() {
         {/* Full-Screen Hero Section */}
         <section 
           id="hero" 
-          className="relative h-screen flex items-center justify-center overflow-hidden bg-forest-green"
+          className="relative h-screen flex items-center justify-center overflow-hidden bg-espresso"
           aria-label="Hero section with property overview"
         >
         {/* Background Image */}
@@ -290,16 +290,19 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Green Tint Overlay */}
-        <div 
+        {/* Warm espresso scrim */}
+        <div
           className="absolute inset-0 z-10"
           style={{
-            background: 'linear-gradient(135deg, rgba(30, 61, 52, 0.75) 0%, rgba(30, 61, 52, 0.5) 100%)'
+            background: 'linear-gradient(180deg, rgba(12,9,5,0.62) 0%, rgba(12,9,5,0.32) 40%, rgba(12,9,5,0.55) 78%, rgba(12,9,5,0.92) 100%)'
           }}
         />
 
         {/* Hero Content - Centered */}
         <div className="relative z-20 text-center px-6 py-10 max-w-5xl">
+          <p className="inline-flex items-center gap-3 text-warm-gold font-sans font-bold uppercase tracking-[0.3em] text-xs mb-5">
+            Premium mountain stays
+          </p>
           <h1 className="text-h1 font-serif font-normal text-cream mb-6 tracking-wide uppercase">
             Premium Vacation Rental in La Trinidad & Close to Baguio City
           </h1>
@@ -358,10 +361,10 @@ export default function HomePage() {
               // Determine badge based on unit
               const getBadge = () => {
                 if (unit.featured) {
-                  return { text: 'Most Popular', color: 'bg-warm-gold' }
+                  return { text: 'Most Popular', color: 'bg-warm-gold', textColor: 'text-[#1b130a]' }
                 }
                 if (unit.id === 'unit-a') {
-                  return { text: 'Most Affordable', color: 'bg-forest-green' }
+                  return { text: 'Most Affordable', color: 'bg-green-accent', textColor: 'text-cream' }
                 }
                 return null
               }
@@ -390,7 +393,7 @@ export default function HomePage() {
                       quality={85}
                     />
                     {badge && (
-                      <div className={`absolute top-4 right-4 ${badge.color} text-cream px-3 py-1.5 rounded-full text-sm font-sans font-semibold`}>
+                      <div className={`absolute top-4 right-4 ${badge.color} ${badge.textColor} px-3 py-1.5 rounded-full text-sm font-sans font-semibold`}>
                         {badge.text}
                       </div>
                     )}
@@ -744,7 +747,7 @@ export default function HomePage() {
                         className="object-cover transition-transform duration-[400ms] group-hover:scale-105"
                         quality={85}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-forest-green/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </div>
                 </div>
@@ -772,7 +775,7 @@ export default function HomePage() {
           {/* Close Button */}
           <button
             onClick={closeLightbox}
-            className="absolute top-6 right-6 z-30 p-3 bg-forest-green bg-opacity-90 text-cream rounded-full hover:bg-opacity-100 transition-all shadow-lg"
+            className="absolute top-6 right-6 z-30 p-3 bg-espresso bg-opacity-90 text-cream rounded-full hover:bg-opacity-100 transition-all shadow-lg"
             aria-label="Close viewer"
           >
             <X size={24} />
@@ -786,7 +789,7 @@ export default function HomePage() {
               {featuredImages.length > 1 && (
                 <button
                   onClick={() => navigateImage('prev')}
-                  className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-forest-green bg-opacity-80 text-cream flex items-center justify-center hover:bg-opacity-100 transition-all shadow-lg"
+                  className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-espresso bg-opacity-80 text-cream flex items-center justify-center hover:bg-opacity-100 transition-all shadow-lg"
                   aria-label="Previous image"
                 >
                   <ChevronLeft size={24} />
@@ -808,7 +811,7 @@ export default function HomePage() {
               {featuredImages.length > 1 && (
                 <button
                   onClick={() => navigateImage('next')}
-                  className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-forest-green bg-opacity-80 text-cream flex items-center justify-center hover:bg-opacity-100 transition-all shadow-lg"
+                  className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-espresso bg-opacity-80 text-cream flex items-center justify-center hover:bg-opacity-100 transition-all shadow-lg"
                   aria-label="Next image"
                 >
                   <ChevronRight size={24} />
@@ -824,8 +827,8 @@ export default function HomePage() {
                       onClick={() => goToImage(index)}
                       className={`w-2 h-2 rounded-full transition-all ${
                         index === currentIndex
-                          ? 'bg-forest-green w-8'
-                          : 'bg-forest-green bg-opacity-40 hover:bg-opacity-60'
+                          ? 'bg-warm-gold w-8'
+                          : 'bg-white bg-opacity-40 hover:bg-opacity-60'
                       }`}
                       aria-label={`Go to image ${index + 1}`}
                     />
