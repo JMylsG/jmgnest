@@ -35,8 +35,10 @@ export default async function ContactPage() {
     <>
       {/* Hero Section */}
       <Hero
-        title="Contact Us"
+        eyebrow="Contact"
+        title="Say hello, we'll take it from here"
         subtitle="We're here to help with any questions"
+        ctaText=""
         imageUrl="https://res.cloudinary.com/jmg-nest/image/upload/v1763355667/Balcony_View_wdbvpd.jpg"
         imageAlt="Contact JMG Nest"
       />
@@ -69,8 +71,8 @@ export default async function ContactPage() {
                   return (
                     <Card key={index} variant="standard">
                       <div className="flex items-start gap-4">
-                        <div className="p-3 bg-warm-sage rounded-lg">
-                          <Icon className="w-6 h-6 text-forest-green" />
+                        <div className="p-3 bg-green-accent/10 rounded-lg">
+                          <Icon className="w-6 h-6 text-green-accent" />
                         </div>
                         <div className="flex-1">
                           <h3 className="heading-h3 mb-2">{info.title}</h3>

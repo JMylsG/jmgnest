@@ -80,8 +80,8 @@ export default function ContactForm({ className }: ContactFormProps) {
         )}
 
         {success && (
-          <div className="md:col-span-2 p-4 bg-forest-green/10 border border-forest-green rounded-lg">
-            <p className="text-forest-green text-sm">{resultMessage}</p>
+          <div className="md:col-span-2 p-4 bg-green-accent/10 border border-green-accent rounded-lg">
+            <p className="text-green-accent text-sm">{resultMessage}</p>
           </div>
         )}
 
