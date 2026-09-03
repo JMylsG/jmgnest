@@ -46,7 +46,7 @@ export default function GalleryGrid({ images, className }: GalleryGridProps) {
                   priority={index < 6}
                   fallbackText="Image Coming Soon"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-forest-green/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso/85 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               {image.caption && (
                 <div className="p-4">

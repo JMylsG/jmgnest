@@ -99,10 +99,12 @@ export default function GalleryPage() {
   return (
     <div className="bg-cream min-h-screen">
       <Hero
-        title="Gallery"
+        eyebrow="Gallery"
+        title="Every corner of the nest"
         subtitle="Explore our beautiful property through photos"
         imageUrl="https://res.cloudinary.com/jmg-nest/image/upload/v1762669722/Baguio_tfutl3.jpg"
         imageAlt="JMG Nest gallery"
+        ctaText=""
       />
 
       <section className="py-20 px-6 bg-cream">
@@ -119,8 +121,8 @@ export default function GalleryPage() {
                 }}
                 className={`px-4 py-2 rounded-full text-sm font-sans transition-all ${
                   activeUnit === 'all'
-                    ? 'bg-forest-green text-cream'
-                    : 'bg-warm-sage text-forest-green hover:bg-opacity-80'
+                    ? 'bg-green-accent text-cream'
+                    : 'bg-white text-text-secondary border border-border-light hover:border-green-accent hover:text-green-accent'
                 }`}
               >
                 All Units
@@ -135,8 +137,8 @@ export default function GalleryPage() {
                     }}
                     className={`px-4 py-2 rounded-full text-sm font-sans transition-all ${
                       activeUnit === key
-                        ? 'bg-forest-green text-cream'
-                        : 'bg-warm-sage text-forest-green hover:bg-opacity-80'
+                        ? 'bg-green-accent text-cream'
+                        : 'bg-white text-text-secondary border border-border-light hover:border-green-accent hover:text-green-accent'
                     }`}
                   >
                     {label}
