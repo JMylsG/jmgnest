@@ -76,7 +76,7 @@ export default function UnitCard({ unit }: UnitCardProps) {
         <div className="mt-auto pt-6 border-t border-border-light">
           <div className="mb-4">
             <p className="text-body text-text-secondary mb-1">
-              from <span className="text-h4 font-serif font-semibold text-forest-green">
+              from <span className="text-h4 font-serif font-semibold text-gold">
                 {formatPrice(unit.pricing.baseRate)}
               </span> per night
             </p>

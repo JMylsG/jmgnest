@@ -17,8 +17,10 @@ export default async function OurUnitsPage() {
     <>
       {/* Hero Section */}
       <Hero
-        title="Our Units"
+        eyebrow="Our Units"
+        title="Three homes, one quiet property"
         subtitle="Choose the perfect space for your mountain retreat"
+        ctaText=""
         imageUrl="https://res.cloudinary.com/jmg-nest/image/upload/v1762619475/main-patio-1.jpg"
         imageAlt="JMG Nest units"
       />

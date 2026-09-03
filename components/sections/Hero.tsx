@@ -6,6 +6,7 @@ import SafeImage from '@/components/ui/SafeImage'
 interface HeroProps {
   title: string
   subtitle?: string
+  eyebrow?: string
   imageUrl: string
   imageAlt: string
   ctaText?: string
@@ -16,6 +17,7 @@ interface HeroProps {
 export default function Hero({
   title,
   subtitle,
+  eyebrow,
   imageUrl,
   imageAlt,
   ctaText = 'Check Availability',
@@ -23,9 +25,9 @@ export default function Hero({
   className,
 }: HeroProps) {
   return (
-    <section className={cn('relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-forest-green', className)}>
+    <section className={cn('relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-espresso', className)}>
       {/* Background Image */}
-      <div className="absolute inset-0 bg-forest-green">
+      <div className="absolute inset-0 bg-espresso">
         <SafeImage
           src={imageUrl}
           alt={imageAlt}
@@ -36,12 +38,23 @@ export default function Hero({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1410px"
         />
       </div>
-      
-      {/* Overlay Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-forest-green/85 via-forest-green/70 to-forest-green/60 z-10" />
-      
+
+      {/* Warm espresso scrim */}
+      <div
+        className="absolute inset-0 z-10"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(12,9,5,0.55) 0%, rgba(12,9,5,0.30) 42%, rgba(12,9,5,0.55) 76%, rgba(12,9,5,0.92) 100%)',
+        }}
+      />
+
       {/* Content */}
       <div className="relative z-20 text-center px-6 py-20 max-w-6xl mx-auto">
+        {eyebrow && (
+          <p className="inline-flex items-center gap-3 text-warm-gold font-sans font-bold uppercase tracking-[0.3em] text-xs mb-5">
+            {eyebrow}
+          </p>
+        )}
         <h1 className="heading-h1 mb-6">
           {title}
         </h1>
@@ -61,4 +74,3 @@ export default function Hero({
     </section>
   )
 }
-
