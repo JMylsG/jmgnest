@@ -1,41 +1,11 @@
 import { Metadata } from 'next'
-import { getUnits } from '@/lib/data'
-import Hero from '@/components/sections/Hero'
-import UnitCard from '@/components/cards/UnitCard'
+import UnitsClient from './UnitsClient'
 
 export const metadata: Metadata = {
   title: 'Our Units',
-  description: 'Explore our three unique units at JMG Nest. Each unit offers comfortable accommodations with modern amenities for your perfect mountain getaway in Baguio City.',
+  description: 'Three homes, one quiet property above La Trinidad Valley, 15 minutes from Baguio City. Compare the Main Unit, Unit A, and Unit B, with nightly and monthly rates.',
 }
 
-export const revalidate = 60 // Revalidate every minute
-
-export default async function OurUnitsPage() {
-  const units = await getUnits()
-
-  return (
-    <>
-      {/* Hero Section */}
-      <Hero
-        eyebrow="Our Units"
-        title="Three homes, one quiet property"
-        subtitle="Choose the perfect space for your mountain retreat"
-        ctaText=""
-        imageUrl="https://res.cloudinary.com/jmg-nest/image/upload/v1762619475/main-patio-1.jpg"
-        imageAlt="JMG Nest units"
-      />
-
-      {/* Units Grid */}
-      <section className="py-20 px-6 bg-cream">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-            {units.map((unit) => (
-              <UnitCard key={unit.id} unit={unit} />
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
-  )
+export default function OurUnitsPage() {
+  return <UnitsClient />
 }
-

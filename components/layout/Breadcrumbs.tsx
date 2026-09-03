@@ -30,8 +30,19 @@ export default function Breadcrumbs() {
     }),
   ]
   
-  // Don't show breadcrumbs on home page
-  if (pathname === '/') {
+  // Don't show breadcrumbs on the home page or on the redesigned full-bleed
+  // marketing pages (their dark image heroes sit flush under the fixed nav).
+  const hideBreadcrumbs = [
+    '/',
+    '/booking',
+    '/gallery',
+    '/about',
+    '/contact',
+    '/faq',
+    '/things-to-do',
+    '/reviews',
+  ]
+  if (hideBreadcrumbs.includes(pathname)) {
     return null
   }
   
