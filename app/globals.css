@@ -20,11 +20,11 @@
 @layer components {
   /* Button Styles */
   .btn-primary {
-    @apply bg-forest-green text-cream rounded-full px-8 py-3.5 text-base font-medium uppercase tracking-wider shadow-md hover:bg-[#2A5447] hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 active:shadow-md active:bg-[#163128] disabled:bg-warm-sage disabled:text-text-tertiary disabled:shadow-none disabled:cursor-not-allowed disabled:opacity-60 transition-all duration-300;
+    @apply bg-warm-gold text-[#1b130a] rounded-full px-8 py-3.5 text-base font-medium uppercase tracking-wider shadow-md hover:bg-[#dcb888] hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 active:shadow-md active:bg-[#b78a52] disabled:bg-warm-sage disabled:text-text-tertiary disabled:shadow-none disabled:cursor-not-allowed disabled:opacity-60 transition-all duration-300;
   }
-  
+
   .btn-secondary {
-    @apply bg-transparent text-forest-green border-2 border-forest-green rounded-full px-[30px] py-3 text-base font-medium uppercase tracking-wider hover:bg-forest-green hover:text-cream hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:bg-[#163128] transition-all duration-300;
+    @apply bg-transparent text-forest-green border border-border-light rounded-full px-[30px] py-3 text-base font-medium uppercase tracking-wider hover:border-warm-gold hover:text-warm-gold hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300;
   }
   
   .btn-text {
@@ -78,7 +78,7 @@
   
   /* Input Styles */
   .input-text {
-    @apply bg-white border-2 border-border-light rounded-lg px-4 py-3 text-base font-sans text-forest-green transition-all duration-200 outline-none hover:border-warm-sage focus:border-forest-green focus:ring-[3px] focus:ring-forest-green/10 disabled:bg-background-subtle disabled:border-border-light disabled:text-text-tertiary disabled:cursor-not-allowed;
+    @apply bg-white border-2 border-border-light rounded-lg px-4 py-3 text-base font-sans text-forest-green transition-all duration-200 outline-none hover:border-warm-sage focus:border-green-accent focus:ring-[3px] focus:ring-green-accent/15 disabled:bg-background-subtle disabled:border-border-light disabled:text-text-tertiary disabled:cursor-not-allowed;
   }
   
   .input-label {

@@ -48,12 +48,12 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-forest-green text-cream border-t-4 border-warm-gold">
+    <footer className="bg-[#120d07] text-cream border-t border-white/10">
       <div className="max-w-[1400px] mx-auto px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* About Column */}
           <div>
-            <h3 className="text-lg font-sans font-semibold mb-4 uppercase tracking-wider">
+            <h3 className="text-lg font-sans font-semibold mb-4 uppercase tracking-wider text-warm-gold">
               About JMG Nest
             </h3>
             <p className="text-sm text-warm-sage font-sans leading-relaxed mb-4">
@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Quick Links Column */}
           <div>
-            <h3 className="text-lg font-sans font-semibold mb-4 uppercase tracking-wider">
+            <h3 className="text-lg font-sans font-semibold mb-4 uppercase tracking-wider text-warm-gold">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div>
-            <h3 className="text-lg font-sans font-semibold mb-4 uppercase tracking-wider">
+            <h3 className="text-lg font-sans font-semibold mb-4 uppercase tracking-wider text-warm-gold">
               Contact Us
             </h3>
             <ul className="space-y-3">
@@ -121,7 +121,7 @@ export default function Footer() {
 
           {/* Social Column */}
           <div>
-            <h3 className="text-lg font-sans font-semibold mb-4 uppercase tracking-wider">
+            <h3 className="text-lg font-sans font-semibold mb-4 uppercase tracking-wider text-warm-gold">
               Where to Find Us
             </h3>
             <div className="flex gap-4">
