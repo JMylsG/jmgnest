@@ -18,8 +18,10 @@ export default async function AboutPage() {
     <>
       {/* Hero Section */}
       <Hero
-        title="About Us"
+        eyebrow="Our story"
+        title="A family's nest in the mountains"
         subtitle="Discover the story behind your perfect mountain retreat"
+        ctaText=""
         imageUrl="https://res.cloudinary.com/jmg-nest/image/upload/v1762619475/main-patio-1.jpg"
         imageAlt="JMG Nest main patio"
       />
