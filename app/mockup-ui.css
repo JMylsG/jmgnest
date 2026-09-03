@@ -864,3 +864,48 @@
   .mk .methods{grid-template-columns:1fr}
   .mk .form-grid{grid-template-columns:1fr}
 }
+
+/* ============================================================
+   FAQ PAGE  (app/faq/page.tsx) — ported from jmgnest-faq-mockup.html
+   Footer-only page; native <details> accordion, gradient hero (no photo).
+   ============================================================ */
+
+/* Gradient hero (no photo) */
+.mk .faq-hero{position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:flex-end;min-height:clamp(300px,44vh,420px);background:radial-gradient(120% 95% at 82% 0%,rgba(203,160,106,.12),transparent 55%),linear-gradient(165deg,#2c241a 0%,#221b12 52%,#150f08 100%)}
+.mk .faq-hero::after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(70% 60% at 10% 110%,rgba(127,184,156,.08),transparent 60%)}
+.mk .fh-inner{position:relative;z-index:1;width:100%;max-width:var(--maxw);margin:0 auto;padding:150px 40px 52px}
+.mk .fh-title{font-family:var(--serif);color:#fff;font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.03;max-width:18ch}
+.mk .fh-lead{color:rgba(243,241,234,.82);font-size:clamp(1rem,1.5vw,1.18rem);max-width:600px;margin:18px 0 0}
+
+/* FAQ content */
+.mk .faq-wrap{max-width:900px;margin:0 auto}
+.mk .faq-group{margin-bottom:clamp(30px,4vw,50px)}
+.mk .faq-group:last-child{margin-bottom:0}
+.mk .faq-cat{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.mk .faq-cat .fc-ic{width:42px;height:42px;flex:none;border-radius:11px;background:var(--green-soft);color:var(--green);display:flex;align-items:center;justify-content:center}
+.mk .faq-cat .fc-ic .ic{width:21px;height:21px}
+.mk .faq-cat h2{font-family:var(--serif);color:var(--cream);font-size:clamp(1.4rem,2.4vw,1.9rem)}
+.mk .faq{display:flex;flex-direction:column;gap:12px}
+.mk .faq details{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s}
+.mk .faq details[open]{border-color:var(--line-2)}
+.mk .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;font-family:var(--serif);font-size:1.18rem;color:var(--cream)}
+.mk .faq summary::-webkit-details-marker{display:none}
+.mk .faq summary:hover{color:var(--gold)}
+.mk .faq summary .ic{width:20px;height:20px;color:var(--green);transition:transform .28s;flex:none}
+.mk .faq details[open] summary .ic{transform:rotate(135deg)}
+.mk .faq details[open] summary{color:var(--cream)}
+.mk .faq .faq-a{padding:0 22px 20px;color:var(--muted);font-size:.95rem;line-height:1.7}
+.mk .faq .faq-a a{color:var(--gold);font-weight:600}
+.mk .faq .faq-a a:hover{text-decoration:underline}
+
+/* Closing CTA espresso band */
+.mk .f-cta{position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(165deg,#2c241a 0%,#221b12 52%,#150f08 100%)}
+.mk .f-cta .wrap{position:relative;text-align:center;padding:clamp(38px,4.4vw,56px) 40px}
+.mk .f-cta .eyebrow{justify-content:center}
+.mk .f-cta .h2{color:#fff;margin:12px auto 12px;max-width:18ch}
+.mk .f-cta .lead{color:rgba(243,241,234,.82);max-width:560px;margin:0 auto 24px}
+.mk .f-cta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+
+@media (max-width:860px){
+  .mk .fh-inner{padding:120px 22px 40px}
+}

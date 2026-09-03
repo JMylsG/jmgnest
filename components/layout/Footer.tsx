@@ -27,7 +27,8 @@ export default function Footer() {
     { path: '/things-to-do', label: 'Things to Do' },
     { path: '/booking', label: 'Book Now' },
     { path: '/reviews', label: 'Reviews' },
-    { path: '/contact', label: 'Contact' }
+    { path: '/contact', label: 'Contact' },
+    { path: '/faq', label: 'FAQ' }
   ]
 
   const socialLinks = [
