@@ -52,35 +52,15 @@ export default function Navigation() {
 
   // Determine nav styling based on page and scroll state
   const getNavStyles = () => {
-    if (isHomePage) {
-      // On home page: transparent overlay, hide when scrolled, no blur
-      if (isScrolled) {
-        return 'lg:opacity-0 lg:pointer-events-none'
-      }
+    // Transparent only over the home hero at the very top; espresso-solid everywhere else
+    if (isHomePage && !isScrolled) {
       return 'bg-transparent border-transparent'
-    } else {
-      // On other pages: solid background with blur
-      return isScrolled
-        ? 'bg-cream/98 shadow-md border-border-light backdrop-blur-[10px]'
-        : 'bg-cream/95 border-border-light backdrop-blur-[10px]'
     }
+    return 'bg-[rgba(22,17,12,0.9)] backdrop-blur-[16px] border-b border-white/10 shadow-md'
   }
 
-  // Determine logo visibility
-  const getLogoStyles = () => {
-    if (isHomePage && isScrolled) {
-      return 'opacity-0 pointer-events-none'
-    }
-    return 'opacity-100'
-  }
-
-  // Determine menu button styles
-  const getMenuButtonStyles = () => {
-    if (isHomePage) {
-      return 'text-cream hover:text-warm-gold hover:bg-white hover:bg-opacity-10'
-    }
-    return 'text-forest-green hover:text-warm-gold'
-  }
+  // Logo stays visible at all times
+  const getLogoStyles = () => 'opacity-100'
 
   return (
     <>
@@ -102,56 +82,41 @@ export default function Navigation() {
               ${getLogoStyles()}
             `}
           >
-            <span className={`text-2xl font-serif font-bold ${
-              isHomePage ? 'text-cream' : 'text-forest-green'
-            }`}>
+            <span className="text-2xl font-serif font-bold text-cream">
               JMG Nest
             </span>
           </Link>
 
-          {/* Desktop Navigation - Hidden on home page, visible and aligned right on other pages */}
-          {!isHomePage && (
-            <div className="hidden lg:flex items-center gap-2 ml-2">
-              {navItems.map((item) => {
-                const active = isActive(item.href)
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`px-4 py-2 text-[0.938rem] font-medium font-sans tracking-[0.05em] rounded transition-all duration-200 ${
-                      active
-                        ? 'text-forest-green bg-warm-sage font-semibold'
-                        : 'text-forest-green hover:text-warm-gold hover:bg-warm-gold/10'
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                )
-              })}
-            </div>
-          )}
+          {/* Desktop pill nav - visible on all pages */}
+          <div className="hidden lg:flex items-center gap-0.5 p-1.5 rounded-full bg-[rgba(32,25,17,0.42)] backdrop-blur-[12px] border border-white/10">
+            {navItems.map((item) => {
+              const active = isActive(item.href)
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`px-[17px] py-2.5 rounded-full text-xs font-bold font-sans uppercase tracking-[0.15em] whitespace-nowrap transition-all duration-200 ${
+                    active
+                      ? 'text-cream bg-white/[0.12]'
+                      : 'text-cream/70 hover:text-cream hover:bg-white/[0.07]'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
+          </div>
 
           {/* Hamburger Menu Button - Always visible on home page, only mobile/tablet on other pages */}
           <button
             onClick={() => setIsMobileMenuOpen(true)}
-            className={`${isHomePage ? '' : 'lg:hidden'} p-2 rounded-full transition-all duration-300 min-w-[44px] min-h-[44px] flex items-center justify-center group ${
-              getMenuButtonStyles()
-            }`}
+            className="lg:hidden p-2 rounded-full transition-all duration-300 min-w-[44px] min-h-[44px] flex items-center justify-center group text-cream hover:text-warm-gold"
             aria-label="Open navigation menu"
           >
             <div className="flex flex-col gap-1.5">
-              {/* Top line - solid */}
-              <div className={`w-6 h-0.5 rounded-full transition-all duration-300 ${
-                isHomePage ? 'bg-cream' : 'bg-forest-green'
-              }`}></div>
-              {/* Middle line - recessed/darker */}
-              <div className={`w-6 h-0.5 rounded-full transition-all duration-300 ${
-                isHomePage ? 'bg-cream bg-opacity-40 group-hover:bg-opacity-60' : 'bg-forest-green bg-opacity-40 group-hover:bg-opacity-60'
-              }`}></div>
-              {/* Bottom line - solid */}
-              <div className={`w-6 h-0.5 rounded-full transition-all duration-300 ${
-                isHomePage ? 'bg-cream' : 'bg-forest-green'
-              }`}></div>
+              <div className="w-6 h-0.5 rounded-full bg-cream transition-all duration-300"></div>
+              <div className="w-6 h-0.5 rounded-full bg-cream bg-opacity-40 group-hover:bg-opacity-60 transition-all duration-300"></div>
+              <div className="w-6 h-0.5 rounded-full bg-cream transition-all duration-300"></div>
             </div>
           </button>
         </div>
