@@ -41,6 +41,7 @@ export default async function UnitBookingPage({ params }: { params: Promise<{ id
     <>
       {/* Hero Section */}
       <Hero
+        eyebrow="Our Units"
         title={unit.name}
         subtitle="Reserve your perfect mountain retreat"
         imageUrl={unit.images[0] || '/images/booking-hero.jpg'}

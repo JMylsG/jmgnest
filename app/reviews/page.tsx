@@ -22,8 +22,10 @@ export default async function ReviewsPage() {
     <>
       {/* Hero Section */}
       <Hero
-        title="Guest Reviews"
+        eyebrow="Reviews"
+        title="What our guests say"
         subtitle="See what our guests have to say"
+        ctaText=""
         imageUrl="/images/reviews-hero.jpg"
         imageAlt="Guest reviews"
       />
