@@ -26,8 +26,8 @@ export default async function ReviewsPage() {
         title="What our guests say"
         subtitle="See what our guests have to say"
         ctaText=""
-        imageUrl="/images/reviews-hero.jpg"
-        imageAlt="Guest reviews"
+        imageUrl="https://res.cloudinary.com/jmg-nest/image/upload/f_auto,q_auto,w_1600/v1763355667/Balcony_View_wdbvpd.jpg"
+        imageAlt="Valley view from the JMG Nest balcony"
       />
 
       {/* Reviews Section */}
