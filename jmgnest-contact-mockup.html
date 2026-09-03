@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JMG Nest — Contact</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     JMG Nest — Contact (standalone, double-click to open)
+     Reuses the homepage/units/gallery/things-to-do design system:
+     light cream default with .dark warm-espresso bookends, Crimson
+     Text + Helvetica, caps pill nav, reveal-on-scroll. Green for
+     iconography + form focus, gold for words + links + buttons.
+     ============================================================ */
+  :root{
+    --bg:#ECE3CF;
+    --bg-2:#F3EBDB;
+    --panel:#FAF4E9;
+    --panel-2:#EFE6D4;
+    --forest:#1E3D34;
+    --cream:#22342C;
+    --muted:#586A62;
+    --muted-2:#8A9A92;
+    --line:rgba(30,61,52,.12);
+    --line-2:rgba(30,61,52,.20);
+    --gold:#A97A3C;
+    --gold-2:#C49863;
+    --gold-soft:rgba(169,121,63,.12);
+    --green:#2E5D4E;
+    --green-soft:rgba(46,93,78,.12);
+    --sage:#D9C7B8;
+    --serif:'Crimson Text', Georgia, 'Times New Roman', serif;
+    --sans:'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --shadow:0 20px 55px rgba(30,61,52,.12);
+    --maxw:1360px;
+  }
+  .dark{
+    --bg:#17120c;
+    --bg-2:#1e1810;
+    --panel:#241d15;
+    --panel-2:#2b2318;
+    --cream:#F3F1EA;
+    --muted:rgba(243,241,234,.64);
+    --muted-2:rgba(243,241,234,.40);
+    --line:rgba(217,199,184,.14);
+    --line-2:rgba(217,199,184,.24);
+    --gold:#CBA06A;
+    --gold-soft:rgba(203,160,106,.13);
+    --green:#7FB89C;
+    --green-soft:rgba(127,184,156,.16);
+    --shadow:0 24px 70px rgba(0,0,0,.45);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--bg);color:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{text-decoration:none;color:inherit}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.14}
+  section,header{scroll-margin-top:92px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+
+  /* Icons */
+  .ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .ic-fill{fill:currentColor;stroke:none}
+
+  /* Shared type */
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);text-transform:uppercase;
+    letter-spacing:.3em;font-size:.7rem;font-weight:700;color:var(--gold)}
+  .eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);opacity:.7}
+  .display{font-family:var(--serif);color:var(--cream)}
+  .h2{font-size:clamp(2rem,4.4vw,3.4rem);line-height:1.1}
+  .h3{font-size:clamp(1.5rem,3vw,2.1rem)}
+  .lead{color:var(--muted);font-size:clamp(1rem,1.4vw,1.15rem)}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;
+    font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;padding:15px 30px;border-radius:9999px;cursor:pointer;
+    border:1px solid transparent;transition:.28s cubic-bezier(.2,.7,.2,1)}
+  .btn .ic{width:1.15em;height:1.15em;transition:transform .25s}
+  .btn-gold{background:var(--gold);color:#1b130a}
+  .btn-gold:hover{background:#dcb888;transform:translateY(-2px)}
+  .btn-gold:hover .ic{transform:translateX(4px)}
+  .btn-ghost{background:transparent;color:var(--cream);border-color:var(--line-2)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .btn-ghost:hover .ic{transform:translateX(4px)}
+  .btn-block{display:flex;width:100%}
+  .btn-text{padding:0;background:none;border:none;color:var(--gold);font-family:var(--sans);font-weight:700;
+    font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+  .btn-text .ic{width:1.2em;height:1.2em;transition:transform .25s}
+  .btn-text:hover .ic{transform:translateX(5px)}
+
+  .sec{padding:clamp(44px,6vw,80px) 0}
+  .sec-head{max-width:660px;margin-bottom:40px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head.center .eyebrow::before{display:none}
+  .sec-head .h2{margin:18px 0 20px}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+  .reveal.d4{transition-delay:.32s}.reveal.d5{transition-delay:.40s}.reveal.d6{transition-delay:.48s}
+
+  /* ============ FIXED HEADER / NAV ============ */
+  .site-header{position:fixed;top:0;left:0;right:0;z-index:60;padding:22px 40px;display:flex;align-items:center;
+    justify-content:space-between;gap:20px;border-bottom:1px solid transparent;transition:background .4s,padding .4s,border-color .4s;
+    opacity:0;animation:scUp .7s cubic-bezier(.2,.7,.2,1) .3s both}
+  .site-header.solid{background:rgba(22,17,12,.84);backdrop-filter:blur(16px);border-color:var(--line);padding:14px 40px}
+  .site-header .wordmark{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:700;font-size:1.7rem;color:var(--cream);letter-spacing:.01em;text-shadow:0 2px 18px rgba(0,0,0,.4)}
+  .site-header .wordmark .mark{width:40px;height:40px;flex:none;border-radius:11px;background:#F3F1EA;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.35);overflow:hidden}
+  .site-header .wordmark .mark svg{width:30px;height:30px;display:block}
+  .site-header.solid .wordmark{text-shadow:none}
+  .nav-pills{display:flex;align-items:center;gap:2px;padding:6px;border-radius:9999px;background:rgba(32,25,17,.42);
+    backdrop-filter:blur(12px);border:1px solid var(--line)}
+  .nav-pills a{padding:10px 17px;border-radius:9999px;font-family:var(--sans);font-size:.7rem;font-weight:700;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--muted);transition:.2s;white-space:nowrap}
+  .nav-pills a:hover{color:var(--cream);background:rgba(255,255,255,.07)}
+  .nav-pills a.active{color:var(--cream);background:rgba(255,255,255,.12)}
+
+  /* ============ COMPACT HERO ============ */
+  .c-hero{position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:flex-end;
+    min-height:clamp(360px,52vh,480px)}
+  .ch-bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+  .ch-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.5) saturate(1.05) contrast(1.02);
+    transform:scale(1.06);animation:scZoom 8s ease-out .1s forwards}
+  .ch-scrim{position:absolute;inset:0;z-index:-1;background:
+    linear-gradient(180deg,rgba(9,12,10,.5) 0%,rgba(9,12,10,.15) 38%,rgba(9,12,10,.6) 74%,rgba(9,12,10,.96) 100%)}
+  .ch-inner{width:100%;max-width:var(--maxw);margin:0 auto;padding:140px 40px 52px}
+  .ch-title{font-family:var(--serif);color:#fff;font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.02;
+    text-shadow:0 6px 60px rgba(0,0,0,.4);max-width:18ch}
+  .ch-lead{color:rgba(243,241,234,.84);font-size:clamp(1rem,1.5vw,1.18rem);max-width:580px;margin:18px 0 26px}
+  .ch-stats{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center}
+  .ch-stat{display:inline-flex;align-items:center;gap:9px;color:rgba(255,255,255,.85);font-size:.86rem}
+  .ch-stat .ic{width:18px;height:18px;color:var(--green)}
+  .ch-stat strong{color:#fff;font-family:var(--serif);font-size:1.15rem;font-weight:600}
+  .ch-stat .sep{width:1px;height:20px;background:rgba(255,255,255,.22)}
+
+  /* ============ CONTACT METHODS ============ */
+  .methods{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .method{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:16px;
+    padding:24px;transition:.28s cubic-bezier(.2,.7,.2,1)}
+  .method:hover{border-color:var(--line-2);background:var(--panel-2);transform:translateY(-4px);box-shadow:var(--shadow)}
+  .method .m-ic{width:52px;height:52px;flex:none;border-radius:14px;background:var(--green-soft);color:var(--green);
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .method .m-ic .ic{width:25px;height:25px}
+  .method h3{font-family:var(--serif);color:var(--cream);font-size:1.28rem;margin-bottom:6px}
+  .method p{font-size:.86rem;color:var(--muted);line-height:1.55;flex:1;margin-bottom:16px}
+  .method .m-val{font-size:.86rem;color:var(--cream);font-weight:600;margin-bottom:14px;word-break:break-word}
+
+  /* ============ CONTACT SPLIT (form + info) ============ */
+  .contact-sec{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .contact-split{display:grid;grid-template-columns:1.5fr .9fr;gap:32px;align-items:start}
+  .form-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3vw,38px)}
+  .form-card > h3{color:var(--cream);margin-bottom:6px}
+  .form-card > .fc-sub{color:var(--muted);font-size:.92rem;margin-bottom:24px}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+  .f-field{display:flex;flex-direction:column;gap:7px}
+  .f-field.full{grid-column:1/-1}
+  .f-field label{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  .f-field input,.f-field select,.f-field textarea{width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;
+    padding:12px 14px;font-family:var(--sans);font-size:.92rem;color:var(--cream);outline:none;transition:.2s}
+  .f-field textarea{resize:vertical;min-height:130px}
+  .f-field select{cursor:pointer}
+  .f-field input:focus,.f-field select:focus,.f-field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px var(--green-soft)}
+  .f-field input::placeholder,.f-field textarea::placeholder{color:var(--muted-2)}
+  .form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:22px}
+  .form-note{font-size:.78rem;color:var(--muted);max-width:280px}
+  .form-success{display:none;align-items:center;gap:9px;color:var(--green);font-weight:600;font-size:.9rem}
+  .form-success.show{display:inline-flex}
+  .form-success .ic{width:18px;height:18px}
+
+  .info-panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:28px}
+  .info-panel h3{color:var(--cream);margin-bottom:4px}
+  .info-panel .ip-sub{color:var(--muted);font-size:.9rem;margin-bottom:20px}
+  .ip-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--line)}
+  .ip-row:first-of-type{border-top:none;padding-top:0}
+  .ip-ic{width:42px;height:42px;flex:none;border-radius:11px;background:var(--green-soft);color:var(--green);
+    display:flex;align-items:center;justify-content:center}
+  .ip-ic .ic{width:20px;height:20px}
+  .ip-row h4{font-family:var(--sans);font-weight:600;color:var(--cream);font-size:.92rem;margin-bottom:2px}
+  .ip-row p{font-size:.84rem;color:var(--muted)}
+  .ip-row a.ip-link{color:var(--gold);font-weight:600}
+  .ip-row a.ip-link:hover{text-decoration:underline}
+
+  /* ============ LOCATION (Google Maps) ============ */
+  .loc-split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:stretch}
+  .loc-map{border-radius:20px;overflow:hidden;border:1px solid var(--line);min-height:440px;display:flex;flex-direction:column;background:var(--panel)}
+  .loc-map iframe{flex:1;border:0;width:100%;min-height:400px;filter:grayscale(.35) contrast(1.05) brightness(.92)}
+  .loc-map .map-cta{padding:14px 18px;border-top:1px solid var(--line)}
+  .loc-info h3{color:var(--cream);margin-bottom:10px}
+  .loc-info .lead{margin-bottom:24px}
+  .loc-fact{display:flex;gap:16px;align-items:flex-start;padding:18px;border-radius:14px;border:1px solid var(--line);
+    background:var(--panel);margin-bottom:14px;transition:.25s}
+  .loc-fact:hover{border-color:var(--line-2);background:var(--panel-2);transform:translateX(4px)}
+  .loc-fact .lf-ic{width:46px;height:46px;flex:none;border-radius:12px;background:var(--green-soft);color:var(--green);
+    display:flex;align-items:center;justify-content:center}
+  .loc-fact .lf-ic .ic{width:22px;height:22px}
+  .loc-fact h4{font-family:var(--sans);font-weight:600;color:var(--cream);font-size:.98rem;margin-bottom:3px}
+  .loc-fact p{font-size:.84rem;color:var(--muted)}
+
+  /* ============ CLOSING CTA (espresso band) ============ */
+  .c-cta{position:relative;overflow:hidden;isolation:isolate;
+    background:linear-gradient(165deg,#2c241a 0%,#221b12 52%,#150f08 100%)}
+  .c-cta .wrap{position:relative;text-align:center;padding:clamp(38px,4.4vw,56px) 40px}
+  .c-cta .eyebrow{justify-content:center}
+  .c-cta .h2{color:#fff;margin:12px auto 12px;max-width:16ch}
+  .c-cta .lead{color:rgba(243,241,234,.82);max-width:560px;margin:0 auto 24px}
+  .c-cta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+
+  /* ============ FOOTER ============ */
+  footer{background:#120d07;border-top:1px solid var(--line)}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:40px;padding:70px 0 40px}
+  footer h4{font-family:var(--sans);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);margin-bottom:20px}
+  footer p,footer li,footer a{color:var(--muted);font-size:.9rem}
+  footer a:hover{color:var(--gold)}
+  footer .about-blurb{margin-bottom:18px;line-height:1.7}
+  .foot-logo{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--cream)}
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .foot-contact li{display:flex;gap:12px;align-items:flex-start}
+  .foot-contact .ic{width:18px;height:18px;color:var(--gold);margin-top:2px}
+  .socials{display:flex;gap:12px}
+  .socials a{width:46px;height:46px;border-radius:9999px;background:rgba(217,199,184,.08);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;color:var(--sage);transition:.2s}
+  .socials a .ic{width:20px;height:20px}
+  .socials a:hover{color:var(--gold);border-color:var(--line-2);background:rgba(203,160,106,.12)}
+  .foot-bottom{border-top:1px solid var(--line);padding:22px 0 40px;display:flex;justify-content:space-between;
+    align-items:center;flex-wrap:wrap;gap:16px}
+  .foot-legal{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:.82rem}
+  .foot-legal .sep{opacity:.4}
+  .foot-copy{font-size:.82rem;color:var(--muted-2)}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1000px){
+    .methods{grid-template-columns:repeat(2,1fr)}
+    .contact-split{grid-template-columns:1fr;gap:24px}
+    .loc-split{grid-template-columns:1fr;gap:30px}
+  }
+  @media (max-width:860px){
+    .nav-pills{overflow-x:auto;max-width:56vw;scrollbar-width:none}
+    .nav-pills::-webkit-scrollbar{display:none}
+    .site-header{padding:14px 18px}
+    .site-header .wordmark{font-size:1.3rem}
+    .ch-inner{padding:118px 22px 40px}
+    .wrap{padding:0 22px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:600px){
+    .foot-grid{grid-template-columns:1fr}
+    .foot-bottom{flex-direction:column;text-align:center}
+    .methods{grid-template-columns:1fr}
+    .form-grid{grid-template-columns:1fr}
+  }
+  @keyframes scZoom{to{transform:scale(1)}}
+  @keyframes scUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+  @media (prefers-reduced-motion:reduce){
+    .site-header{animation:none;opacity:1}
+    .ch-bg img{animation:none;transform:scale(1)}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body id="top">
+
+<!-- ============ SVG ICON SPRITE ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-guests" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M16 5.2a3.2 3.2 0 0 1 0 6"/><path d="M17 15.2a5.5 5.5 0 0 1 3.5 4.8"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.7 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.3 19.6l1.4-6.3-4.8-4.3 6.4-.6z"/></symbol>
+  <symbol id="i-mountain" viewBox="0 0 24 24"><path d="M2.5 19.5l6-11 3.5 5.5 2-3 7.5 8.5z"/><path d="M8.5 8.5l2 3.2"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.7V19a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V9.7"/><path d="M9.5 20v-5.5h5V20"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s6.5-5.8 6.5-10.5A6.5 6.5 0 1 0 5.5 11c0 4.7 6.5 10.5 6.5 10.5z"/><circle cx="12" cy="10.5" r="2.4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3.6"/><path d="M10.6 10.6L20 20M16.5 16.5l2-2M14.5 14.5l2.5-2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.4 3.5h3l1.5 4-2 1.4a11 11 0 0 0 5 5l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7 2 2 0 0 1 6.4 3.5z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.4L19.5 10l-5.6 1.6L12 17l-1.9-5.4L4.5 10l5.6-1.6z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.5 7l8.5 5.5L20.5 7"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4.5 5h15A1.5 1.5 0 0 1 21 6.5v8a1.5 1.5 0 0 1-1.5 1.5H9l-4 3.5V16H4.5A1.5 1.5 0 0 1 3 14.5v-8A1.5 1.5 0 0 1 4.5 5z"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4.5 12h15M13 5.5l6.5 6.5L13 18.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></symbol>
+  <symbol id="i-google" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></symbol>
+  <symbol id="i-airbnb" viewBox="0 0 32 32"><path d="M29.5 22.3c-.4-1-.75-1.9-1.18-2.74v-.04c-2.36-5-4.55-9.5-6.63-13.55l-.14-.2C20.07 3.7 19 1.9 15.92 1.9c-3.05 0-4.34 2.1-5.67 4.87l-.1.2c-2.09 4.04-4.28 8.55-6.63 13.55v.07l-.7 1.52c-.26.63-.4.96-.43 1.06-.28.7-.44 1.5-.44 2.33 0 3.53 2.86 6.39 6.39 6.39h.06c.12 0 .23-.01.34-.04h.46c2.74-.57 5.07-2.06 6.71-4.12 1.66 2.08 3.98 3.57 6.65 4.13h.54c3.5 0 6.35-2.83 6.38-6.32 0-.84-.16-1.64-.46-2.38zm-13.5 1.54c-1.37-1.54-2.4-3.4-2.99-5.47a3.7 3.7 0 0 1-.2-1.17c0-.7.21-1.37.57-1.93.54-.8 1.45-1.32 2.48-1.32h.35c1.03 0 1.94.53 2.47 1.33.35.54.56 1.2.56 1.9 0 .43-.07.83-.2 1.2-.63 2.16-1.66 4.02-3.03 5.6z"/></symbol>
+</svg>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header dark" id="siteHeader">
+  <a href="jmgnest-homepage-mockup.html" class="wordmark"><span class="mark"><img src="data:image/png;base64,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" alt="JMG Nest" style="width:30px;height:30px;object-fit:contain"></span> JMG Nest</a>
+  <nav class="nav-pills">
+    <a href="jmgnest-homepage-mockup.html">Home</a>
+    <a href="jmgnest-gallery-mockup.html">Gallery</a>
+    <a href="jmgnest-things-to-do-mockup.html">Things to Do</a>
+    <a href="jmgnest-units-mockup.html">Our Units</a>
+    <a href="jmgnest-contact-mockup.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<!-- ============ COMPACT HERO ============ -->
+<header class="c-hero dark">
+  <div class="ch-bg">
+    <img src="https://res.cloudinary.com/jmg-nest/image/upload/f_auto,q_auto,w_1600/SDB_9291_bobgxm.jpg" alt="Warm living space at JMG Nest">
+  </div>
+  <div class="ch-scrim"></div>
+  <div class="ch-inner">
+    <p class="eyebrow" style="color:var(--gold-2)">Contact</p>
+    <h1 class="ch-title">Say hello, we'll take it from here</h1>
+    <p class="ch-lead">Questions about dates, a long stay, or what to do nearby? Reach us the way you like best, and our host team will get back to you, usually within a day.</p>
+    <div class="ch-stats">
+      <span class="ch-stat"><svg class="ic"><use href="#i-chat"/></svg>Replies within a day</span>
+      <span class="sep"></span>
+      <span class="ch-stat"><svg class="ic"><use href="#i-house"/></svg><strong>3</strong> homes</span>
+      <span class="sep"></span>
+      <span class="ch-stat"><svg class="ic"><use href="#i-mountain"/></svg>La Trinidad Valley</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ CONTACT METHODS ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow">Ways to reach us</p>
+      <h2 class="display h2">Pick whatever is easiest</h2>
+      <p class="lead">However you get in touch, you reach the same friendly host team. For the quickest hold on your dates, book straight through Airbnb.</p>
+    </div>
+    <div class="methods">
+      <div class="method reveal d1">
+        <span class="m-ic"><svg class="ic"><use href="#i-mail"/></svg></span>
+        <h3>Email</h3>
+        <p>Best for detailed questions, long stays, and group bookings.</p>
+        <span class="m-val">info@jmgnest.com</span>
+        <a class="btn-text" href="mailto:info@jmgnest.com">Send an email <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <div class="method reveal d2">
+        <span class="m-ic"><svg class="ic"><use href="#i-chat"/></svg></span>
+        <h3>Message us</h3>
+        <p>Quick questions? Send us a message on Facebook and we'll reply fast.</p>
+        <span class="m-val">facebook.com/jmgnest</span>
+        <a class="btn-text" href="https://www.facebook.com/jmgnest" target="_blank" rel="noopener noreferrer">Open Messenger <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <div class="method reveal d3">
+        <span class="m-ic"><svg class="ic"><use href="#i-phone"/></svg></span>
+        <h3>Call or text</h3>
+        <p>Prefer to talk it through? Reach us during the day, Baguio time.</p>
+        <span class="m-val">+63 9XX XXX XXXX</span>
+        <a class="btn-text" href="#">Save our number <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <div class="method reveal d4">
+        <span class="m-ic"><svg class="ic"><use href="#i-airbnb"/></svg></span>
+        <h3>Book on Airbnb</h3>
+        <p>See live availability and reserve instantly, with Airbnb protection.</p>
+        <span class="m-val">Instant booking &middot; verified reviews</span>
+        <a class="btn-text" href="https://www.airbnb.com/rooms/1318250624522250354" target="_blank" rel="noopener noreferrer">View on Airbnb <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT FORM + INFO ============ -->
+<section class="sec contact-sec" id="enquire">
+  <div class="wrap">
+    <div class="contact-split">
+      <!-- Form -->
+      <form class="form-card reveal" id="contact-form" onsubmit="return handleSubmit(event)">
+        <h3 class="display h3">Send an enquiry</h3>
+        <p class="fc-sub">Tell us a little about your trip and we'll come back with dates, rates, and a few local tips.</p>
+        <div class="form-grid">
+          <div class="f-field">
+            <label for="cf-name">Full name</label>
+            <input id="cf-name" name="name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="f-field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" placeholder="you@email.com" required>
+          </div>
+          <div class="f-field">
+            <label for="cf-unit">Unit of interest</label>
+            <select id="cf-unit" name="unit">
+              <option value="">Any / not sure yet</option>
+              <option value="main">Main Unit &middot; up to 12 guests</option>
+              <option value="unit-a">Unit A &middot; up to 8 guests</option>
+              <option value="unit-b">Unit B &middot; up to 10 guests</option>
+              <option value="long-stay">Monthly / long stay</option>
+            </select>
+          </div>
+          <div class="f-field">
+            <label for="cf-guests">Guests</label>
+            <select id="cf-guests" name="guests">
+              <option value="">Select guests</option>
+              <option>1 &ndash; 2</option>
+              <option>3 &ndash; 4</option>
+              <option>5 &ndash; 6</option>
+              <option>7 &ndash; 8</option>
+              <option>9 &ndash; 10</option>
+              <option>11 &ndash; 12</option>
+            </select>
+          </div>
+          <div class="f-field">
+            <label for="cf-in">Check in</label>
+            <input id="cf-in" name="checkin" type="date">
+          </div>
+          <div class="f-field">
+            <label for="cf-out">Check out</label>
+            <input id="cf-out" name="checkout" type="date">
+          </div>
+          <div class="f-field full">
+            <label for="cf-msg">Message</label>
+            <textarea id="cf-msg" name="message" placeholder="Anything you'd like us to know, questions, or special requests." required></textarea>
+          </div>
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-gold">Send message <svg class="ic"><use href="#i-arrow-right"/></svg></button>
+          <span class="form-success" id="cf-success"><svg class="ic"><use href="#i-check"/></svg> Thanks, your message is on its way. We'll reply soon.</span>
+          <p class="form-note">We only use your details to answer your enquiry. No spam, ever.</p>
+        </div>
+      </form>
+
+      <!-- Info panel -->
+      <aside class="info-panel reveal d1">
+        <h3 class="display h3">Contact details</h3>
+        <p class="ip-sub">The nest, at a glance.</p>
+        <div class="ip-row">
+          <span class="ip-ic"><svg class="ic"><use href="#i-pin"/></svg></span>
+          <div><h4>Where we are</h4><p>La Trinidad Valley, Benguet &middot; about 15 minutes from Baguio City. Exact address shared on booking.</p></div>
+        </div>
+        <div class="ip-row">
+          <span class="ip-ic"><svg class="ic"><use href="#i-mail"/></svg></span>
+          <div><h4>Email</h4><p><a class="ip-link" href="mailto:info@jmgnest.com">info@jmgnest.com</a></p></div>
+        </div>
+        <div class="ip-row">
+          <span class="ip-ic"><svg class="ic"><use href="#i-clock"/></svg></span>
+          <div><h4>Response time</h4><p>Usually within a day, often much sooner during the day, Baguio time.</p></div>
+        </div>
+        <div class="ip-row">
+          <span class="ip-ic"><svg class="ic"><use href="#i-key"/></svg></span>
+          <div><h4>Check-in &middot; check-out</h4><p>Check in from 3:00 PM &middot; check out by 11:00 AM. Early or late by arrangement.</p></div>
+        </div>
+        <div class="ip-row">
+          <span class="ip-ic"><svg class="ic"><use href="#i-guests"/></svg></span>
+          <div><h4>Your hosts</h4><p>A warm local team on the ground, ready with directions and recommendations.</p></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION (Google Maps) ============ -->
+<section class="sec" id="location">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow">Getting here</p>
+      <h2 class="display h2">Find your way to the nest</h2>
+      <p class="lead">We sit above La Trinidad Valley, a quiet fifteen minutes from the heart of Baguio City. Once your stay is confirmed, we'll send the exact pin and check-in details.</p>
+    </div>
+    <div class="loc-split">
+      <div class="loc-map reveal">
+        <iframe title="JMG Nest location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=La%20Trinidad%20Benguet%20Philippines&output=embed"></iframe>
+        <div class="map-cta">
+          <a href="https://www.google.com/maps/search/?api=1&query=La+Trinidad+Benguet+Philippines" target="_blank" rel="noopener noreferrer" class="btn-text">Open in Google Maps <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </div>
+      <div class="loc-info reveal d1">
+        <h3 class="display h3">A few notes for arrival</h3>
+        <p class="lead">Small things that make the drive up easy.</p>
+        <div class="loc-fact"><div class="lf-ic"><svg class="ic"><use href="#i-house"/></svg></div><div><h4>Free private parking</h4><p>Bring the car right up &middot; secure, on-site parking is included</p></div></div>
+        <div class="loc-fact"><div class="lf-ic"><svg class="ic"><use href="#i-pin"/></svg></div><div><h4>Quiet, elevated setting</h4><p>Up the mountain, away from the traffic, yet close to the city</p></div></div>
+        <div class="loc-fact"><div class="lf-ic"><svg class="ic"><use href="#i-chat"/></svg></div><div><h4>Directions on request</h4><p>Message us anytime and we'll guide you to the door</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<section class="c-cta dark">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--gold)">Ready when you are</p>
+    <h2 class="display h2">Let's plan your stay</h2>
+    <p class="lead">Tell us your dates and we'll take care of the rest. Pick the unit that fits your group and settle in above the La Trinidad valley, fifteen minutes from Baguio City.</p>
+    <div class="c-cta-actions">
+      <a href="jmgnest-units-mockup.html#book" class="btn btn-gold">Check availability <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      <a href="jmgnest-units-mockup.html" class="btn btn-ghost">View all units <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="footer" class="dark">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>About JMG Nest</h4>
+        <p class="about-blurb">Your cozy mountain retreat in La Trinidad Valley, just 15 minutes from Baguio City. Luxury, comfort, and breathtaking views.</p>
+        <div class="foot-logo">JMG Nest</div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="jmgnest-about-mockup.html">About Us</a></li>
+          <li><a href="jmgnest-gallery-mockup.html">Gallery</a></li>
+          <li><a href="jmgnest-things-to-do-mockup.html">Things to Do</a></li>
+          <li><a href="jmgnest-units-mockup.html#book">Book Now</a></li>
+          <li><a href="jmgnest-units-mockup.html#compare">Compare Units</a></li>
+          <li><a href="jmgnest-contact-mockup.html">Contact</a></li>
+          <li><a href="jmgnest-faq-mockup.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul class="foot-contact">
+          <li><svg class="ic"><use href="#i-pin"/></svg><span>La Trinidad Valley, Benguet, Philippines</span></li>
+          <li><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:info@jmgnest.com">info@jmgnest.com</a></li>
+          <li><svg class="ic"><use href="#i-chat"/></svg><a href="jmgnest-contact-mockup.html#enquire">Message us directly</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Where to Find Us</h4>
+        <div class="socials">
+          <a href="#" aria-label="Google"><svg class="ic ic-fill"><use href="#i-google"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg class="ic ic-fill"><use href="#i-facebook"/></svg></a>
+          <a href="#" aria-label="Airbnb"><svg class="ic ic-fill"><use href="#i-airbnb"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-legal">
+        <a href="#">Privacy Policy</a><span class="sep">/</span>
+        <a href="#">Terms of Service</a><span class="sep">/</span>
+        <a href="#">Cookie Policy</a><span class="sep">/</span>
+        <a href="#">Disclaimer</a>
+      </div>
+      <div class="foot-copy">&copy; 2026 JMG Nest. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- Contact form (mockup: no real submission) ----
+  function handleSubmit(e){
+    e.preventDefault();
+    var form = document.getElementById('contact-form');
+    var ok = document.getElementById('cf-success');
+    if(!form.checkValidity()){ form.reportValidity(); return false; }
+    ok.classList.add('show');
+    form.querySelectorAll('input,select,textarea').forEach(function(el){ el.value = ''; });
+    setTimeout(function(){ ok.classList.remove('show'); }, 6000);
+    return false;
+  }
+
+  // ---- Header solid on scroll ----
+  var header = document.getElementById('siteHeader');
+  function onScroll(){ header.classList.toggle('solid', window.scrollY > 60); }
+  window.addEventListener('scroll', onScroll); onScroll();
+
+  // ---- Reveal on scroll ----
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>

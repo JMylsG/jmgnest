@@ -1,0 +1,943 @@
+{
+  "designSystemMetadata": {
+    "name": "JMG Nest Design System",
+    "version": "1.0.0",
+    "basedOn": "MORI LIVING visual patterns with JMG Nest Color Schema",
+    "purpose": "Comprehensive style guide for AI-powered consistent design replication"
+  },
+  
+  "colorPalette": {
+    "primary": {
+      "darkGreen": {
+        "hex": "#1E3D34",
+        "rgb": "rgb(30, 61, 52)",
+        "usage": "Primary brand color, CTA buttons, navigation headers, footer backgrounds, accent elements"
+      },
+      "sage": {
+        "hex": "#D9C7B8",
+        "rgb": "rgb(217, 199, 184)",
+        "usage": "Secondary backgrounds, card backgrounds, subtle accents, dividers"
+      },
+      "cream": {
+        "hex": "#FAF9F6",
+        "rgb": "rgb(250, 249, 246)",
+        "usage": "Page backgrounds, card content areas, light sections, overlay backgrounds"
+      },
+      "warmGold": {
+        "hex": "#C49863",
+        "rgb": "rgb(196, 152, 99)",
+        "usage": "Text links, hover states, accent text, icons, decorative elements"
+      }
+    },
+    
+    "semantic": {
+      "success": "#1E3D34",
+      "warning": "#C49863",
+      "error": "#8B4513",
+      "info": "#D9C7B8"
+    },
+    
+    "text": {
+      "primary": {
+        "hex": "#1E3D34",
+        "usage": "Main headings, body text, navigation items"
+      },
+      "secondary": {
+        "hex": "#5A6B64",
+        "usage": "Secondary headings, supporting text, captions"
+      },
+      "tertiary": {
+        "hex": "#8A9A93",
+        "usage": "Helper text, placeholder text, disabled text"
+      },
+      "inverse": {
+        "hex": "#FAF9F6",
+        "usage": "Text on dark backgrounds, button text on dark buttons"
+      },
+      "accent": {
+        "hex": "#C49863",
+        "usage": "Links, call-to-action text, emphasized text"
+      }
+    },
+    
+    "backgrounds": {
+      "page": {
+        "hex": "#FAF9F6",
+        "usage": "Main page background"
+      },
+      "section": {
+        "hex": "#FFFFFF",
+        "usage": "Content sections, card backgrounds"
+      },
+      "subtle": {
+        "hex": "#F5F3F0",
+        "usage": "Alternating sections, subtle container backgrounds"
+      },
+      "dark": {
+        "hex": "#1E3D34",
+        "usage": "Footer, hero overlays, dark sections"
+      },
+      "accent": {
+        "hex": "#D9C7B8",
+        "usage": "Featured sections, highlighted containers"
+      }
+    },
+    
+    "borders": {
+      "light": {
+        "hex": "#E8E4DF",
+        "usage": "Card borders, dividers, input borders"
+      },
+      "medium": {
+        "hex": "#D9C7B8",
+        "usage": "Emphasized borders, focused inputs"
+      },
+      "dark": {
+        "hex": "#1E3D34",
+        "usage": "Strong dividers, active borders"
+      }
+    }
+  },
+  
+  "typography": {
+    "fontFamilies": {
+      "primary": {
+        "stack": "'Crimson Text', Georgia, 'Times New Roman', serif",
+        "usage": "Headings, hero text, elegant display text",
+        "weights": [400, 600, 700]
+      },
+      "secondary": {
+        "stack": "'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
+        "usage": "Body text, navigation, UI elements",
+        "weights": [300, 400, 500, 600]
+      }
+    },
+    
+    "scale": {
+      "h1": {
+        "fontSize": "clamp(2.5rem, 5vw, 4rem)",
+        "lineHeight": "1.1",
+        "fontWeight": "400",
+        "fontFamily": "primary",
+        "letterSpacing": "0.01em",
+        "color": "#FAF9F6",
+        "usage": "Hero titles, main page headers",
+        "textTransform": "uppercase"
+      },
+      "h2": {
+        "fontSize": "clamp(2rem, 4vw, 3rem)",
+        "lineHeight": "1.2",
+        "fontWeight": "400",
+        "fontFamily": "primary",
+        "letterSpacing": "0.02em",
+        "color": "#1E3D34",
+        "usage": "Section headings, major divisions"
+      },
+      "h3": {
+        "fontSize": "clamp(1.5rem, 3vw, 2rem)",
+        "lineHeight": "1.3",
+        "fontWeight": "600",
+        "fontFamily": "primary",
+        "letterSpacing": "0.01em",
+        "color": "#1E3D34",
+        "usage": "Card titles, subsection headings"
+      },
+      "h4": {
+        "fontSize": "clamp(1.25rem, 2.5vw, 1.5rem)",
+        "lineHeight": "1.4",
+        "fontWeight": "600",
+        "fontFamily": "secondary",
+        "letterSpacing": "0.01em",
+        "color": "#1E3D34",
+        "usage": "Component titles, list headers"
+      },
+      "body": {
+        "fontSize": "clamp(0.938rem, 2vw, 1.125rem)",
+        "lineHeight": "1.7",
+        "fontWeight": "400",
+        "fontFamily": "secondary",
+        "letterSpacing": "0.01em",
+        "color": "#5A6B64",
+        "usage": "Main body text, paragraphs"
+      },
+      "caption": {
+        "fontSize": "clamp(0.813rem, 1.5vw, 0.938rem)",
+        "lineHeight": "1.5",
+        "fontWeight": "400",
+        "fontFamily": "secondary",
+        "letterSpacing": "0.02em",
+        "color": "#8A9A93",
+        "usage": "Captions, helper text, footnotes"
+      },
+      "small": {
+        "fontSize": "clamp(0.75rem, 1.25vw, 0.875rem)",
+        "lineHeight": "1.4",
+        "fontWeight": "400",
+        "fontFamily": "secondary",
+        "letterSpacing": "0.03em",
+        "color": "#8A9A93",
+        "usage": "Fine print, disclaimers, metadata"
+      }
+    }
+  },
+  
+  "components": {
+    "buttons": {
+      "primary": {
+        "default": {
+          "background": "#1E3D34",
+          "color": "#FAF9F6",
+          "border": "none",
+          "borderRadius": "50px",
+          "padding": "14px 32px",
+          "fontSize": "1rem",
+          "fontWeight": "500",
+          "fontFamily": "secondary",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.1em",
+          "boxShadow": "0 4px 12px rgba(30, 61, 52, 0.2)",
+          "transition": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+        },
+        "hover": {
+          "background": "#2A5447",
+          "color": "#FAF9F6",
+          "transform": "translateY(-2px)",
+          "boxShadow": "0 8px 20px rgba(30, 61, 52, 0.3)"
+        },
+        "active": {
+          "background": "#163128",
+          "transform": "translateY(0)",
+          "boxShadow": "0 2px 8px rgba(30, 61, 52, 0.3)"
+        },
+        "disabled": {
+          "background": "#D9C7B8",
+          "color": "#8A9A93",
+          "boxShadow": "none",
+          "cursor": "not-allowed",
+          "opacity": "0.6"
+        }
+      },
+      
+      "secondary": {
+        "default": {
+          "background": "transparent",
+          "color": "#1E3D34",
+          "border": "2px solid #1E3D34",
+          "borderRadius": "50px",
+          "padding": "12px 30px",
+          "fontSize": "1rem",
+          "fontWeight": "500",
+          "fontFamily": "secondary",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.1em",
+          "boxShadow": "none",
+          "transition": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+        },
+        "hover": {
+          "background": "#1E3D34",
+          "color": "#FAF9F6",
+          "borderColor": "#1E3D34",
+          "transform": "translateY(-2px)",
+          "boxShadow": "0 4px 12px rgba(30, 61, 52, 0.15)"
+        },
+        "active": {
+          "background": "#163128",
+          "color": "#FAF9F6",
+          "borderColor": "#163128",
+          "transform": "translateY(0)"
+        }
+      },
+      
+      "text": {
+        "default": {
+          "background": "transparent",
+          "color": "#C49863",
+          "border": "none",
+          "borderRadius": "4px",
+          "padding": "8px 16px",
+          "fontSize": "1rem",
+          "fontWeight": "500",
+          "fontFamily": "secondary",
+          "letterSpacing": "0.02em",
+          "boxShadow": "none",
+          "transition": "all 0.2s ease"
+        },
+        "hover": {
+          "background": "rgba(196, 152, 99, 0.1)",
+          "color": "#A87B4A",
+          "textDecoration": "none"
+        },
+        "active": {
+          "background": "rgba(196, 152, 99, 0.15)",
+          "color": "#8B6238"
+        }
+      }
+    },
+    
+    "cards": {
+      "standard": {
+        "container": {
+          "background": "#FFFFFF",
+          "border": "1px solid #E8E4DF",
+          "borderRadius": "8px",
+          "padding": "32px",
+          "boxShadow": "0 2px 8px rgba(30, 61, 52, 0.08)",
+          "transition": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+          "overflow": "hidden"
+        },
+        "hover": {
+          "boxShadow": "0 8px 24px rgba(30, 61, 52, 0.12)",
+          "transform": "translateY(-4px)",
+          "borderColor": "#D9C7B8"
+        },
+        "header": {
+          "marginBottom": "16px",
+          "paddingBottom": "16px",
+          "borderBottom": "1px solid #E8E4DF"
+        },
+        "title": {
+          "fontSize": "1.5rem",
+          "fontWeight": "600",
+          "fontFamily": "primary",
+          "color": "#1E3D34",
+          "marginBottom": "8px"
+        },
+        "content": {
+          "fontSize": "1rem",
+          "lineHeight": "1.7",
+          "color": "#5A6B64",
+          "fontFamily": "secondary"
+        },
+        "footer": {
+          "marginTop": "24px",
+          "paddingTop": "16px",
+          "borderTop": "1px solid #E8E4DF"
+        }
+      },
+      
+      "elevated": {
+        "container": {
+          "background": "#FAF9F6",
+          "border": "none",
+          "borderRadius": "12px",
+          "padding": "40px",
+          "boxShadow": "0 4px 16px rgba(30, 61, 52, 0.1)",
+          "transition": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+        },
+        "hover": {
+          "boxShadow": "0 12px 32px rgba(30, 61, 52, 0.15)",
+          "transform": "translateY(-6px)"
+        }
+      },
+      
+      "imageCard": {
+        "container": {
+          "background": "#FFFFFF",
+          "border": "none",
+          "borderRadius": "12px",
+          "overflow": "hidden",
+          "boxShadow": "0 4px 16px rgba(30, 61, 52, 0.1)",
+          "transition": "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)"
+        },
+        "imageWrapper": {
+          "position": "relative",
+          "overflow": "hidden",
+          "aspectRatio": "16/9",
+          "background": "#D9C7B8"
+        },
+        "image": {
+          "width": "100%",
+          "height": "100%",
+          "objectFit": "cover",
+          "transition": "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)"
+        },
+        "imageHover": {
+          "transform": "scale(1.05)"
+        },
+        "overlay": {
+          "position": "absolute",
+          "inset": "0",
+          "background": "linear-gradient(180deg, rgba(30, 61, 52, 0) 0%, rgba(30, 61, 52, 0.7) 100%)",
+          "opacity": "0",
+          "transition": "opacity 0.3s ease"
+        },
+        "overlayHover": {
+          "opacity": "1"
+        },
+        "content": {
+          "padding": "24px"
+        }
+      }
+    },
+    
+    "navigation": {
+      "header": {
+        "container": {
+          "background": "rgba(250, 249, 246, 0.95)",
+          "backdropFilter": "blur(10px)",
+          "borderBottom": "1px solid #E8E4DF",
+          "padding": "16px 32px",
+          "position": "sticky",
+          "top": "0",
+          "zIndex": "1000",
+          "boxShadow": "0 2px 8px rgba(30, 61, 52, 0.05)",
+          "transition": "all 0.3s ease"
+        },
+        "scrolled": {
+          "background": "rgba(250, 249, 246, 0.98)",
+          "boxShadow": "0 4px 16px rgba(30, 61, 52, 0.1)"
+        }
+      },
+      
+      "link": {
+        "default": {
+          "color": "#1E3D34",
+          "fontSize": "0.938rem",
+          "fontWeight": "500",
+          "fontFamily": "secondary",
+          "textDecoration": "none",
+          "letterSpacing": "0.05em",
+          "padding": "8px 16px",
+          "borderRadius": "4px",
+          "transition": "all 0.2s ease"
+        },
+        "hover": {
+          "color": "#C49863",
+          "background": "rgba(196, 152, 99, 0.1)"
+        },
+        "active": {
+          "color": "#1E3D34",
+          "background": "#D9C7B8",
+          "fontWeight": "600"
+        }
+      },
+      
+      "footer": {
+        "container": {
+          "background": "#1E3D34",
+          "color": "#FAF9F6",
+          "padding": "48px 32px 24px",
+          "borderTop": "4px solid #C49863"
+        },
+        "link": {
+          "color": "#D9C7B8",
+          "fontSize": "0.938rem",
+          "fontWeight": "400",
+          "textDecoration": "none",
+          "transition": "color 0.2s ease"
+        },
+        "linkHover": {
+          "color": "#C49863"
+        },
+        "sectionTitle": {
+          "color": "#FAF9F6",
+          "fontSize": "1.125rem",
+          "fontWeight": "600",
+          "marginBottom": "16px",
+          "fontFamily": "secondary",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.1em"
+        }
+      }
+    },
+    
+    "hero": {
+      "container": {
+        "position": "relative",
+        "minHeight": "70vh",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "overflow": "hidden",
+        "background": "#1E3D34"
+      },
+      "overlay": {
+        "position": "absolute",
+        "inset": "0",
+        "background": "linear-gradient(135deg, rgba(30, 61, 52, 0.85) 0%, rgba(30, 61, 52, 0.6) 100%)",
+        "zIndex": "1"
+      },
+      "content": {
+        "position": "relative",
+        "zIndex": "2",
+        "textAlign": "center",
+        "padding": "40px 24px",
+        "maxWidth": "1200px"
+      },
+      "title": {
+        "fontSize": "clamp(2.5rem, 5vw, 4rem)",
+        "fontWeight": "400",
+        "fontFamily": "primary",
+        "color": "#FAF9F6",
+        "marginBottom": "24px",
+        "letterSpacing": "0.05em",
+        "textTransform": "uppercase"
+      },
+      "subtitle": {
+        "fontSize": "clamp(1.125rem, 2.5vw, 1.5rem)",
+        "fontWeight": "300",
+        "fontFamily": "secondary",
+        "color": "#D9C7B8",
+        "marginBottom": "32px",
+        "letterSpacing": "0.02em"
+      }
+    },
+    
+    "inputs": {
+      "text": {
+        "default": {
+          "background": "#FFFFFF",
+          "border": "2px solid #E8E4DF",
+          "borderRadius": "8px",
+          "padding": "12px 16px",
+          "fontSize": "1rem",
+          "fontFamily": "secondary",
+          "color": "#1E3D34",
+          "transition": "all 0.2s ease",
+          "outline": "none"
+        },
+        "focus": {
+          "borderColor": "#1E3D34",
+          "boxShadow": "0 0 0 3px rgba(30, 61, 52, 0.1)"
+        },
+        "hover": {
+          "borderColor": "#D9C7B8"
+        },
+        "error": {
+          "borderColor": "#8B4513",
+          "boxShadow": "0 0 0 3px rgba(139, 69, 19, 0.1)"
+        },
+        "disabled": {
+          "background": "#F5F3F0",
+          "borderColor": "#E8E4DF",
+          "color": "#8A9A93",
+          "cursor": "not-allowed"
+        }
+      },
+      
+      "label": {
+        "fontSize": "0.938rem",
+        "fontWeight": "500",
+        "fontFamily": "secondary",
+        "color": "#1E3D34",
+        "marginBottom": "8px",
+        "display": "block",
+        "letterSpacing": "0.02em"
+      },
+      
+      "helperText": {
+        "fontSize": "0.875rem",
+        "fontFamily": "secondary",
+        "color": "#8A9A93",
+        "marginTop": "6px"
+      },
+      
+      "errorText": {
+        "fontSize": "0.875rem",
+        "fontFamily": "secondary",
+        "color": "#8B4513",
+        "marginTop": "6px"
+      }
+    },
+    
+    "badges": {
+      "default": {
+        "background": "#D9C7B8",
+        "color": "#1E3D34",
+        "padding": "4px 12px",
+        "borderRadius": "20px",
+        "fontSize": "0.813rem",
+        "fontWeight": "500",
+        "fontFamily": "secondary",
+        "letterSpacing": "0.05em",
+        "textTransform": "uppercase"
+      },
+      "primary": {
+        "background": "#1E3D34",
+        "color": "#FAF9F6"
+      },
+      "accent": {
+        "background": "#C49863",
+        "color": "#FAF9F6"
+      }
+    },
+    
+    "mapMarkers": {
+      "default": {
+        "background": "#1E3D34",
+        "color": "#FAF9F6",
+        "border": "3px solid #FAF9F6",
+        "borderRadius": "50%",
+        "width": "48px",
+        "height": "48px",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "fontSize": "1.125rem",
+        "fontWeight": "600",
+        "fontFamily": "secondary",
+        "boxShadow": "0 4px 12px rgba(30, 61, 52, 0.3)",
+        "transition": "all 0.3s ease",
+        "cursor": "pointer"
+      },
+      "hover": {
+        "transform": "scale(1.15)",
+        "boxShadow": "0 6px 20px rgba(30, 61, 52, 0.4)",
+        "background": "#C49863"
+      },
+      "active": {
+        "background": "#C49863",
+        "border": "3px solid #1E3D34",
+        "transform": "scale(1.2)"
+      }
+    },
+    
+    "dividers": {
+      "light": {
+        "background": "#E8E4DF",
+        "height": "1px",
+        "border": "none",
+        "margin": "24px 0"
+      },
+      "medium": {
+        "background": "#D9C7B8",
+        "height": "2px",
+        "border": "none",
+        "margin": "32px 0"
+      },
+      "accent": {
+        "background": "#C49863",
+        "height": "3px",
+        "border": "none",
+        "margin": "40px 0"
+      }
+    }
+  },
+  
+  "layout": {
+    "container": {
+      "maxWidth": "1400px",
+      "margin": "0 auto",
+      "padding": "0 24px"
+    },
+    
+    "section": {
+      "padding": "80px 0",
+      "mobilePadding": "48px 0"
+    },
+    
+    "grid": {
+      "columns": {
+        "desktop": "repeat(auto-fit, minmax(300px, 1fr))",
+        "tablet": "repeat(auto-fit, minmax(250px, 1fr))",
+        "mobile": "1fr"
+      },
+      "gap": "32px",
+      "mobileGap": "24px"
+    }
+  },
+  
+  "effects": {
+    "shadows": {
+      "small": "0 2px 8px rgba(30, 61, 52, 0.08)",
+      "medium": "0 4px 16px rgba(30, 61, 52, 0.12)",
+      "large": "0 8px 24px rgba(30, 61, 52, 0.16)",
+      "xl": "0 12px 32px rgba(30, 61, 52, 0.2)"
+    },
+    
+    "transitions": {
+      "fast": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "base": "300ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "slow": "500ms cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    
+    "animations": {
+      "fadeIn": {
+        "keyframes": "opacity: 0 to 1",
+        "duration": "500ms",
+        "easing": "ease-in-out"
+      },
+      "slideUp": {
+        "keyframes": "transform: translateY(20px) to translateY(0), opacity: 0 to 1",
+        "duration": "600ms",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      "scaleIn": {
+        "keyframes": "transform: scale(0.95) to scale(1), opacity: 0 to 1",
+        "duration": "400ms",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+      }
+    },
+    
+    "blur": {
+      "subtle": "blur(4px)",
+      "medium": "blur(10px)",
+      "strong": "blur(20px)"
+    }
+  },
+  
+  "spacing": {
+    "scale": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "2xl": "48px",
+      "3xl": "64px",
+      "4xl": "80px"
+    }
+  },
+  
+  "borderRadius": {
+    "none": "0",
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "16px",
+    "2xl": "24px",
+    "full": "9999px"
+  },
+  
+  "DO_NOT_RULES": {
+    "colorMisapplication": [
+      "DO NOT apply card background colors (#FFFFFF, #FAF9F6) to text elements",
+      "DO NOT use primary button background (#1E3D34) for body text",
+      "DO NOT apply hero overlay gradients to regular card components",
+      "DO NOT use footer background color (#1E3D34) on page sections",
+      "DO NOT apply border colors (#E8E4DF) as background colors",
+      "DO NOT use accent text color (#C49863) as primary text color",
+      "DO NOT apply button hover states as default states",
+      "DO NOT use shadow colors as solid backgrounds"
+    ],
+    
+    "gradientMisuse": [
+      "DO NOT apply hero overlay gradients to navigation bars",
+      "DO NOT use overlay gradients on text elements",
+      "DO NOT apply gradients to icon fills - use solid colors only",
+      "DO NOT add gradients to input fields",
+      "DO NOT use gradients on small UI elements like badges"
+    ],
+    
+    "shadowMisuse": [
+      "DO NOT apply shadows to text elements",
+      "DO NOT add multiple shadow layers to single elements",
+      "DO NOT use shadows on elements inside shadowed containers",
+      "DO NOT apply xl shadows to small components",
+      "DO NOT add shadows to footer elements on dark backgrounds"
+    ],
+    
+    "typographyMisuse": [
+      "DO NOT use serif fonts (primary) for body text - use sans-serif (secondary)",
+      "DO NOT apply uppercase text transform to body content",
+      "DO NOT use h1 styles for card titles",
+      "DO NOT mix font families within the same text block",
+      "DO NOT use caption sizes for primary content"
+    ],
+    
+    "buttonMisuse": [
+      "DO NOT use primary button styles for text links",
+      "DO NOT apply button hover transforms to static elements",
+      "DO NOT use CTA button styles for navigation links",
+      "DO NOT add box shadows to text-only buttons",
+      "DO NOT use button border radius on card containers"
+    ],
+    
+    "cardMisuse": [
+      "DO NOT apply imageCard styles to text-only cards",
+      "DO NOT use elevated card shadows on flat designs",
+      "DO NOT apply card hover transforms to static content",
+      "DO NOT use card padding values for buttons",
+      "DO NOT nest elevated cards inside standard cards"
+    ],
+    
+    "spacingMisuse": [
+      "DO NOT use component padding for layout spacing",
+      "DO NOT apply button padding to card elements",
+      "DO NOT use hero padding for standard sections",
+      "DO NOT mix spacing scales inconsistently"
+    ]
+  },
+  
+  "contextSpecificApplications": {
+    "hero_section": {
+      "description": "Large banner area with overlay and centered content",
+      "required_elements": {
+        "background": "Dark image or solid #1E3D34",
+        "overlay": "linear-gradient(135deg, rgba(30, 61, 52, 0.85) 0%, rgba(30, 61, 52, 0.6) 100%)",
+        "title": "Use h1 typography with color #FAF9F6",
+        "subtitle": "Use hero.subtitle with color #D9C7B8",
+        "cta_button": "Use buttons.primary with full specifications"
+      },
+      "do_not": [
+        "DO NOT use card backgrounds in hero sections",
+        "DO NOT apply small shadows to hero elements",
+        "DO NOT use body text colors for hero titles"
+      ]
+    },
+    
+    "content_cards": {
+      "description": "Elevated containers for property listings or content blocks",
+      "required_elements": {
+        "container": "Use cards.standard.container or cards.elevated.container",
+        "image": "Use cards.imageCard specifications if image present",
+        "title": "Use typography.scale.h3 with color #1E3D34",
+        "body": "Use typography.scale.body with color #5A6B64",
+        "border": "Use borders.light (#E8E4DF) at 1px",
+        "shadow": "Use effects.shadows.small or medium"
+      },
+      "do_not": [
+        "DO NOT apply gradients to card backgrounds",
+        "DO NOT use button backgrounds for card containers",
+        "DO NOT apply hero overlays to card images"
+      ]
+    },
+    
+    "navigation_header": {
+      "description": "Sticky top navigation with semi-transparent background",
+      "required_elements": {
+        "container": "Use navigation.header.container with backdrop blur",
+        "background": "rgba(250, 249, 246, 0.95) with backdropFilter: blur(10px)",
+        "links": "Use navigation.link styles",
+        "logo": "Color #1E3D34",
+        "border": "Bottom border 1px solid #E8E4DF"
+      },
+      "do_not": [
+        "DO NOT use solid opaque backgrounds",
+        "DO NOT apply card shadows to navigation",
+        "DO NOT use button styles for navigation links"
+      ]
+    },
+    
+    "footer": {
+      "description": "Dark footer with organized link sections",
+      "required_elements": {
+        "background": "#1E3D34",
+        "topBorder": "4px solid #C49863",
+        "text": "Color #FAF9F6 for headings, #D9C7B8 for links",
+        "sectionTitles": "Use navigation.footer.sectionTitle",
+        "links": "Use navigation.footer.link"
+      },
+      "do_not": [
+        "DO NOT use light backgrounds in footer",
+        "DO NOT apply card styles to footer sections",
+        "DO NOT use primary text colors (#1E3D34) on dark background"
+      ]
+    },
+    
+    "map_interface": {
+      "description": "Interactive map with custom markers",
+      "required_elements": {
+        "markers": "Use components.mapMarkers.default",
+        "markerBackground": "#1E3D34",
+        "markerText": "#FAF9F6",
+        "markerBorder": "3px solid #FAF9F6",
+        "activeMarker": "Background #C49863 with border #1E3D34"
+      },
+      "do_not": [
+        "DO NOT use card shadows on map markers",
+        "DO NOT apply gradients to markers",
+        "DO NOT use button hover transforms - use scale only"
+      ]
+    },
+    
+    "cta_buttons": {
+      "description": "Primary action buttons throughout the site",
+      "required_elements": {
+        "background": "#1E3D34",
+        "text": "#FAF9F6",
+        "borderRadius": "50px (pill shape)",
+        "padding": "14px 32px",
+        "shadow": "0 4px 12px rgba(30, 61, 52, 0.2)",
+        "hoverTransform": "translateY(-2px)"
+      },
+      "do_not": [
+        "DO NOT use accent colors (#C49863) for primary buttons",
+        "DO NOT apply card border radius (8px) to buttons",
+        "DO NOT use gradients on button backgrounds"
+      ]
+    },
+    
+    "text_links": {
+      "description": "Inline text links and secondary actions",
+      "required_elements": {
+        "color": "#C49863",
+        "hoverColor": "#A87B4A",
+        "hoverBackground": "rgba(196, 152, 99, 0.1)",
+        "textDecoration": "none",
+        "transition": "all 0.2s ease"
+      },
+      "do_not": [
+        "DO NOT use button styles for text links",
+        "DO NOT add borders to text links",
+        "DO NOT apply shadows to text links"
+      ]
+    },
+    
+    "form_inputs": {
+      "description": "Text inputs, textareas, and form fields",
+      "required_elements": {
+        "background": "#FFFFFF",
+        "border": "2px solid #E8E4DF",
+        "borderRadius": "8px",
+        "focusBorder": "#1E3D34",
+        "focusShadow": "0 0 0 3px rgba(30, 61, 52, 0.1)",
+        "textColor": "#1E3D34"
+      },
+      "do_not": [
+        "DO NOT use button border radius (50px) for inputs",
+        "DO NOT apply card shadows to inputs",
+        "DO NOT use accent colors for default border"
+      ]
+    }
+  },
+  
+  "responsiveBreakpoints": {
+    "mobile": "320px - 767px",
+    "tablet": "768px - 1023px",
+    "desktop": "1024px - 1439px",
+    "wide": "1440px+"
+  },
+  
+  "accessibilityRequirements": {
+    "colorContrast": {
+      "normalText": "Minimum 4.5:1 ratio",
+      "largeText": "Minimum 3:1 ratio",
+      "uiComponents": "Minimum 3:1 ratio"
+    },
+    "focusIndicators": {
+      "color": "#1E3D34",
+      "style": "2px solid outline with 3px offset or box-shadow ring",
+      "visibility": "Always visible on keyboard focus"
+    },
+    "touchTargets": {
+      "minimumSize": "44x44px",
+      "spacing": "Minimum 8px between targets"
+    }
+  },
+  
+  "implementationNotes": {
+    "general": [
+      "Always use the color palette hex values exactly as specified",
+      "Maintain consistent spacing using the spacing scale",
+      "Apply transitions to all interactive elements",
+      "Test hover states on all clickable components",
+      "Ensure typography scale is responsive using clamp()",
+      "Use semantic HTML elements with proper ARIA labels"
+    ],
+    
+    "colorApplication": [
+      "Primary brand color (#1E3D34) is for CTAs, headers, and primary UI elements",
+      "Sage (#D9C7B8) is for secondary backgrounds and subtle accents - never for primary text",
+      "Cream (#FAF9F6) is for page backgrounds and light sections - never for borders alone",
+      "Warm Gold (#C49863) is for accents, links, and hover states - not for primary buttons"
+    ],
+    
+    "componentHierarchy": [
+      "Hero sections sit at the top level with full viewport consideration",
+      "Cards are contained within sections and should not inherit section backgrounds",
+      "Buttons are independent interactive elements - never inherit card styling",
+      "Navigation is a separate overlay layer - never use content section styling"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "jmg-nest",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate-favicons": "node scripts/generate-favicons.js",
+    "generate-favicons-dark": "node scripts/generate-favicons-dark.js",
+    "generate-favicons-all": "npm run generate-favicons && npm run generate-favicons-dark"
+  },
+  "browserslist": [
+    "defaults and supports es6-module",
+    "maintained node versions",
+    "not IE 11"
+  ],
+  "dependencies": {
+    "@portabletext/react": "^3.2.4",
+    "@sanity/client": "^6.29.1",
+    "@sanity/icons": "^3.7.4",
+    "@sanity/image-url": "^1.2.0",
+    "@sanity/vision": "^4.15.0",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.400.0",
+    "next": "^16.0.7",
+    "next-sanity": "^11.6.6",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "resend": "^6.4.2",
+    "sanity": "^4.15.0",
+    "styled-components": "^6.1.19",
+    "tailwind-merge": "^2.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/styled-components": "^5.1.35",
+    "autoprefixer": "^10.4.0",
+    "node-fetch": "^2.7.0",
+    "postcss": "^8.4.0",
+    "sharp": "^0.33.0",
+    "tailwindcss": "^3.4.0",
+    "to-ico": "^1.1.5",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JMG Nest — Things to Do</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     JMG Nest — Things to Do (standalone, double-click to open)
+     Reuses the homepage/units/gallery design system verbatim:
+     light cream default with .dark warm-espresso bookends, Crimson
+     Text + Helvetica, caps pill nav, reveal-on-scroll. Category
+     filters mirror the gallery's sticky filter bar + chips.
+     ============================================================ */
+  :root{
+    --bg:#ECE3CF;
+    --bg-2:#F3EBDB;
+    --panel:#FAF4E9;
+    --panel-2:#EFE6D4;
+    --forest:#1E3D34;
+    --cream:#22342C;
+    --muted:#586A62;
+    --muted-2:#8A9A92;
+    --line:rgba(30,61,52,.12);
+    --line-2:rgba(30,61,52,.20);
+    --gold:#A97A3C;
+    --gold-2:#C49863;
+    --gold-soft:rgba(169,121,63,.12);
+    --green:#2E5D4E;
+    --green-soft:rgba(46,93,78,.12);
+    --sage:#D9C7B8;
+    --serif:'Crimson Text', Georgia, 'Times New Roman', serif;
+    --sans:'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --shadow:0 20px 55px rgba(30,61,52,.12);
+    --maxw:1360px;
+  }
+  .dark{
+    --bg:#17120c;
+    --bg-2:#1e1810;
+    --panel:#241d15;
+    --panel-2:#2b2318;
+    --cream:#F3F1EA;
+    --muted:rgba(243,241,234,.64);
+    --muted-2:rgba(243,241,234,.40);
+    --line:rgba(217,199,184,.14);
+    --line-2:rgba(217,199,184,.24);
+    --gold:#CBA06A;
+    --gold-soft:rgba(203,160,106,.13);
+    --green:#7FB89C;
+    --green-soft:rgba(127,184,156,.16);
+    --shadow:0 24px 70px rgba(0,0,0,.45);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--bg);color:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{text-decoration:none;color:inherit}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.14}
+  section,header{scroll-margin-top:92px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+
+  /* Icons */
+  .ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .ic-fill{fill:currentColor;stroke:none}
+
+  /* Shared type */
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);text-transform:uppercase;
+    letter-spacing:.3em;font-size:.7rem;font-weight:700;color:var(--gold)}
+  .eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);opacity:.7}
+  .display{font-family:var(--serif);color:var(--cream)}
+  .h2{font-size:clamp(2rem,4.4vw,3.4rem);line-height:1.1}
+  .h3{font-size:clamp(1.5rem,3vw,2.1rem)}
+  .lead{color:var(--muted);font-size:clamp(1rem,1.4vw,1.15rem)}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;
+    font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;padding:15px 30px;border-radius:9999px;cursor:pointer;
+    border:1px solid transparent;transition:.28s cubic-bezier(.2,.7,.2,1)}
+  .btn .ic{width:1.15em;height:1.15em;transition:transform .25s}
+  .btn-gold{background:var(--gold);color:#1b130a}
+  .btn-gold:hover{background:#dcb888;transform:translateY(-2px)}
+  .btn-gold:hover .ic{transform:translateX(4px)}
+  .btn-ghost{background:transparent;color:var(--cream);border-color:var(--line-2)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .btn-ghost:hover .ic{transform:translateX(4px)}
+  .btn-block{display:flex;width:100%}
+  .btn-text{padding:0;background:none;border:none;color:var(--gold);font-family:var(--sans);font-weight:700;
+    font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+  .btn-text .ic{width:1.2em;height:1.2em;transition:transform .25s}
+  .btn-text:hover .ic{transform:translateX(5px)}
+
+  .sec{padding:clamp(44px,6vw,80px) 0}
+  .sec-head{max-width:660px;margin-bottom:40px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head.center .eyebrow::before{display:none}
+  .sec-head .h2{margin:18px 0 20px}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+  .reveal.d4{transition-delay:.32s}.reveal.d5{transition-delay:.40s}.reveal.d6{transition-delay:.48s}
+
+  /* ============ FIXED HEADER / NAV ============ */
+  .site-header{position:fixed;top:0;left:0;right:0;z-index:60;padding:22px 40px;display:flex;align-items:center;
+    justify-content:space-between;gap:20px;border-bottom:1px solid transparent;transition:background .4s,padding .4s,border-color .4s;
+    opacity:0;animation:scUp .7s cubic-bezier(.2,.7,.2,1) .3s both}
+  .site-header.solid{background:rgba(22,17,12,.84);backdrop-filter:blur(16px);border-color:var(--line);padding:14px 40px}
+  .site-header .wordmark{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:700;font-size:1.7rem;color:var(--cream);letter-spacing:.01em;text-shadow:0 2px 18px rgba(0,0,0,.4)}
+  .site-header .wordmark .mark{width:40px;height:40px;flex:none;border-radius:11px;background:#F3F1EA;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.35);overflow:hidden}
+  .site-header .wordmark .mark svg{width:30px;height:30px;display:block}
+  .site-header.solid .wordmark{text-shadow:none}
+  .nav-pills{display:flex;align-items:center;gap:2px;padding:6px;border-radius:9999px;background:rgba(32,25,17,.42);
+    backdrop-filter:blur(12px);border:1px solid var(--line)}
+  .nav-pills a{padding:10px 17px;border-radius:9999px;font-family:var(--sans);font-size:.7rem;font-weight:700;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--muted);transition:.2s;white-space:nowrap}
+  .nav-pills a:hover{color:var(--cream);background:rgba(255,255,255,.07)}
+  .nav-pills a.active{color:var(--cream);background:rgba(255,255,255,.12)}
+
+  /* ============ COMPACT HERO ============ */
+  .t-hero{position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:flex-end;
+    min-height:clamp(380px,56vh,520px)}
+  .th-bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+  .th-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.5) saturate(1.05) contrast(1.02);
+    transform:scale(1.06);animation:scZoom 8s ease-out .1s forwards}
+  .th-scrim{position:absolute;inset:0;z-index:-1;background:
+    linear-gradient(180deg,rgba(9,12,10,.5) 0%,rgba(9,12,10,.15) 38%,rgba(9,12,10,.6) 74%,rgba(9,12,10,.96) 100%)}
+  .th-inner{width:100%;max-width:var(--maxw);margin:0 auto;padding:140px 40px 52px}
+  .th-title{font-family:var(--serif);color:#fff;font-size:clamp(2.4rem,6vw,4.8rem);line-height:1.02;
+    text-shadow:0 6px 60px rgba(0,0,0,.4);max-width:16ch}
+  .th-lead{color:rgba(243,241,234,.84);font-size:clamp(1rem,1.5vw,1.18rem);max-width:580px;margin:18px 0 26px}
+  .th-stats{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center}
+  .th-stat{display:inline-flex;align-items:center;gap:9px;color:rgba(255,255,255,.85);font-size:.86rem}
+  .th-stat .ic{width:18px;height:18px;color:var(--green)}
+  .th-stat strong{color:#fff;font-family:var(--serif);font-size:1.15rem;font-weight:600}
+  .th-stat .sep{width:1px;height:20px;background:rgba(255,255,255,.22)}
+
+  /* ============ FILTER BAR ============ */
+  .filter-bar{position:sticky;top:0;z-index:40;background:var(--bg-2);border-bottom:1px solid var(--line);
+    padding:16px 0;box-shadow:0 8px 24px rgba(30,61,52,.05)}
+  .filter-inner{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px}
+  .filter-group{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .filter-lbl{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--green);margin-right:2px}
+  .chip-row{display:flex;flex-wrap:wrap;gap:8px}
+  .fchip{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:9999px;cursor:pointer;
+    font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);background:var(--panel);border:1px solid var(--line);transition:.2s}
+  .fchip:hover{color:var(--green);border-color:var(--green)}
+  .fchip.active{color:#F3F1EA;background:var(--green);border-color:var(--green)}
+  .fchip .ic{width:14px;height:14px}
+  .filter-count{margin-left:auto;font-size:.82rem;color:var(--muted);font-style:italic}
+  .filter-count b{font-family:var(--serif);font-style:normal;color:var(--green);font-size:1.05rem}
+
+  /* ============ ACTIVITY GRID (image-led, full-bleed) ============ */
+  .acts-sec{padding:clamp(32px,4vw,56px) 0 clamp(48px,6vw,84px)}
+  .acts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .act-card{position:relative;display:block;overflow:hidden;border-radius:16px;border:1px solid var(--line);
+    aspect-ratio:4/3;background:linear-gradient(160deg,#2c241a 0%,#221b12 55%,#150f08 100%);color:#fff;
+    opacity:0;transform:translateY(18px) scale(.99);
+    transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+  .act-card.shown{opacity:1;transform:none}
+  .act-card:hover{box-shadow:0 26px 60px rgba(0,0,0,.42)}
+  .act-ph{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;color:rgba(127,184,156,.42)}
+  .act-ph .ic{width:54px;height:54px}
+  .act-photo{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;
+    transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .act-card:hover .act-photo{transform:scale(1.06)}
+  .act-scrim{position:absolute;inset:0;z-index:2;
+    background:linear-gradient(to top,rgba(10,8,5,.92) 0%,rgba(10,8,5,.4) 44%,rgba(10,8,5,.04) 70%,rgba(10,8,5,.28) 100%)}
+  .act-top{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:16px}
+  .act-tag{font-family:var(--sans);font-size:.58rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:#1b130a;background:#C49863;padding:6px 12px;border-radius:9999px;white-space:nowrap}
+  .act-dist{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:600;color:#fff;white-space:nowrap;
+    background:rgba(10,8,5,.42);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.16);padding:6px 11px;border-radius:9999px}
+  .act-dist .ic{width:13px;height:13px;color:#7FB89C}
+  .act-body{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:20px 20px 18px}
+  .act-name{display:block;font-family:var(--serif);color:#fff;font-size:1.5rem;line-height:1.12;margin-bottom:8px;
+    text-shadow:0 2px 18px rgba(0,0,0,.55)}
+  .act-meta{display:flex;flex-wrap:wrap;gap:6px 16px}
+  .act-meta span{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;color:rgba(243,241,234,.84)}
+  .act-meta .ic{width:15px;height:15px;color:#7FB89C}
+  .act-cta{display:inline-flex;align-items:center;gap:8px;margin-top:13px;font-family:var(--sans);font-weight:700;
+    font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#C49863;opacity:0;transform:translateY(6px);transition:.28s}
+  .act-card:hover .act-cta{opacity:1;transform:none}
+  .act-cta .ic{width:1.2em;height:1.2em;transition:transform .25s}
+  .act-card:hover .act-cta .ic{transform:translateX(4px)}
+  .acts-empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted);font-style:italic}
+
+  /* ============ STORIES & GUIDES (blog posts) ============ */
+  .guides-sec{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .guides-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:36px;flex-wrap:wrap}
+  .guides-head .gh-copy{max-width:640px}
+  .guides-head .gh-copy .h2{margin:16px 0 14px}
+  .guides-head .gh-copy .lead{margin:0}
+  .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .guide-card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    overflow:hidden;transition:.28s cubic-bezier(.2,.7,.2,1)}
+  .guide-card:hover{border-color:var(--line-2);transform:translateY(-4px);box-shadow:var(--shadow)}
+  .g-thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(160deg,#2c241a,#1c150d)}
+  .g-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .guide-card:hover .g-thumb img{transform:scale(1.06)}
+  .g-badge{position:absolute;top:14px;left:14px;font-family:var(--sans);font-size:.58rem;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:#1b130a;background:#C49863;padding:6px 12px;border-radius:9999px}
+  .g-body{display:flex;flex-direction:column;flex:1;padding:22px 22px 20px}
+  .g-byline{display:flex;align-items:center;gap:8px;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--muted-2);font-weight:600;margin-bottom:10px}
+  .g-byline .dot{width:3px;height:3px;border-radius:50%;background:var(--muted-2)}
+  .guide-card h3{font-family:var(--serif);color:var(--cream);font-size:1.4rem;line-height:1.18;margin-bottom:10px}
+  .g-excerpt{font-size:.9rem;color:var(--muted);line-height:1.6;flex:1;margin-bottom:16px}
+  .g-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .g-tags{display:flex;gap:6px 14px;flex-wrap:wrap}
+  .g-tag{display:inline-flex;align-items:center;gap:6px;font-size:.74rem;color:var(--muted)}
+  .g-tag .ic{width:14px;height:14px;color:var(--green)}
+  @media (max-width:1000px){ .guide-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:600px){ .guide-grid{grid-template-columns:1fr} }
+
+  /* ============ LOCATION (Google Maps) ============ */
+  .loc-split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:stretch}
+  .loc-map{border-radius:20px;overflow:hidden;border:1px solid var(--line);min-height:470px;display:flex;flex-direction:column;background:var(--panel)}
+  .loc-map iframe{flex:1;border:0;width:100%;min-height:430px;filter:grayscale(.35) contrast(1.05) brightness(.92)}
+  .loc-map .map-cta{padding:14px 18px;border-top:1px solid var(--line)}
+  .loc-info h3{color:var(--cream);margin-bottom:10px}
+  .loc-info .lead{margin-bottom:24px}
+  .loc-fact{display:flex;gap:16px;align-items:flex-start;padding:18px;border-radius:14px;border:1px solid var(--line);
+    background:var(--panel);margin-bottom:14px;transition:.25s}
+  .loc-fact:hover{border-color:var(--line-2);background:var(--panel-2);transform:translateX(4px)}
+  .loc-fact .lf-ic{width:46px;height:46px;flex:none;border-radius:12px;background:var(--green-soft);color:var(--green);
+    display:flex;align-items:center;justify-content:center}
+  .loc-fact .lf-ic .ic{width:22px;height:22px}
+  .loc-fact h4{font-family:var(--sans);font-weight:600;color:var(--cream);font-size:.98rem;margin-bottom:3px}
+  .loc-fact p{font-size:.84rem;color:var(--muted)}
+
+  /* ============ PLAN YOUR DAY (light band) ============ */
+  .plan-sec{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+  .plan-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px 24px}
+  .plan-card .pc-ic{width:48px;height:48px;border-radius:13px;background:var(--green-soft);color:var(--green);
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .plan-card .pc-ic .ic{width:24px;height:24px}
+  .plan-card .pc-when{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:8px}
+  .plan-card h4{font-family:var(--serif);color:var(--cream);font-size:1.3rem;margin-bottom:10px}
+  .plan-card p{font-size:.9rem;color:var(--muted);line-height:1.6}
+
+  /* ============ CLOSING CTA (espresso band) ============ */
+  .t-cta{position:relative;overflow:hidden;isolation:isolate;
+    background:linear-gradient(165deg,#2c241a 0%,#221b12 52%,#150f08 100%)}
+  .t-cta .wrap{position:relative;text-align:center;padding:clamp(38px,4.4vw,56px) 40px}
+  .t-cta .eyebrow{justify-content:center}
+  .t-cta .h2{color:#fff;margin:12px auto 12px;max-width:16ch}
+  .t-cta .lead{color:rgba(243,241,234,.82);max-width:560px;margin:0 auto 24px}
+  .t-cta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+
+  /* ============ FOOTER ============ */
+  footer{background:#120d07;border-top:1px solid var(--line)}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:40px;padding:70px 0 40px}
+  footer h4{font-family:var(--sans);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);margin-bottom:20px}
+  footer p,footer li,footer a{color:var(--muted);font-size:.9rem}
+  footer a:hover{color:var(--gold)}
+  footer .about-blurb{margin-bottom:18px;line-height:1.7}
+  .foot-logo{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--cream)}
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .foot-contact li{display:flex;gap:12px;align-items:flex-start}
+  .foot-contact .ic{width:18px;height:18px;color:var(--gold);margin-top:2px}
+  .socials{display:flex;gap:12px}
+  .socials a{width:46px;height:46px;border-radius:9999px;background:rgba(217,199,184,.08);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;color:var(--sage);transition:.2s}
+  .socials a .ic{width:20px;height:20px}
+  .socials a:hover{color:var(--gold);border-color:var(--line-2);background:rgba(203,160,106,.12)}
+  .foot-bottom{border-top:1px solid var(--line);padding:22px 0 40px;display:flex;justify-content:space-between;
+    align-items:center;flex-wrap:wrap;gap:16px}
+  .foot-legal{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:.82rem}
+  .foot-legal .sep{opacity:.4}
+  .foot-copy{font-size:.82rem;color:var(--muted-2)}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1000px){
+    .acts-grid{grid-template-columns:repeat(2,1fr)}
+    .plan-grid{grid-template-columns:1fr}
+    .loc-split{grid-template-columns:1fr;gap:30px}
+  }
+  @media (max-width:860px){
+    .nav-pills{overflow-x:auto;max-width:56vw;scrollbar-width:none}
+    .nav-pills::-webkit-scrollbar{display:none}
+    .site-header{padding:14px 18px}
+    .site-header .wordmark{font-size:1.3rem}
+    .th-inner{padding:118px 22px 40px}
+    .wrap{padding:0 22px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .filter-count{margin-left:0;width:100%}
+  }
+  @media (max-width:600px){
+    .foot-grid{grid-template-columns:1fr}
+    .foot-bottom{flex-direction:column;text-align:center}
+    .acts-grid{grid-template-columns:1fr}
+    .plan-grid{grid-template-columns:1fr}
+    .filter-group{width:100%}
+  }
+  @keyframes scZoom{to{transform:scale(1)}}
+  @keyframes scUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+  @media (prefers-reduced-motion:reduce){
+    .site-header{animation:none;opacity:1}
+    .th-bg img{animation:none;transform:scale(1)}
+    .reveal,.act-card{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body id="top">
+
+<!-- ============ SVG ICON SPRITE ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-guests" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M16 5.2a3.2 3.2 0 0 1 0 6"/><path d="M17 15.2a5.5 5.5 0 0 1 3.5 4.8"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.7 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.3 19.6l1.4-6.3-4.8-4.3 6.4-.6z"/></symbol>
+  <symbol id="i-mountain" viewBox="0 0 24 24"><path d="M2.5 19.5l6-11 3.5 5.5 2-3 7.5 8.5z"/><path d="M8.5 8.5l2 3.2"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.7V19a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V9.7"/><path d="M9.5 20v-5.5h5V20"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s6.5-5.8 6.5-10.5A6.5 6.5 0 1 0 5.5 11c0 4.7 6.5 10.5 6.5 10.5z"/><circle cx="12" cy="10.5" r="2.4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.4L19.5 10l-5.6 1.6L12 17l-1.9-5.4L4.5 10l5.6-1.6z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.5 7l8.5 5.5L20.5 7"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4.5 5h15A1.5 1.5 0 0 1 21 6.5v8a1.5 1.5 0 0 1-1.5 1.5H9l-4 3.5V16H4.5A1.5 1.5 0 0 1 3 14.5v-8A1.5 1.5 0 0 1 4.5 5z"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4.5 12h15M13 5.5l6.5 6.5L13 18.5"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 3l4.5 6.5H14l3.5 5H6.5L10 9.5H7.5z"/><path d="M12 14.5V21"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6.5 8h11l1 12.5H5.5z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+  <symbol id="i-berry" viewBox="0 0 24 24"><path d="M12 8.5c3.2 0 5.5 2 5.5 5 0 3.8-3.3 7.5-5.5 7.5S6.5 17.3 6.5 13.5c0-3 2.3-5 5.5-5z"/><path d="M9 7c1 1 2 1.5 3 1.5S14 8 15 7"/><path d="M12 8.5V6"/></symbol>
+  <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M4 8.5h13V13a4.5 4.5 0 0 1-4.5 4.5H8.5A4.5 4.5 0 0 1 4 13z"/><path d="M17 9.5h1.8a2.4 2.4 0 0 1 0 4.8H17"/><path d="M8 3v2.2M12 3v2.2"/></symbol>
+  <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M12 3l8 4.5H4z"/><path d="M6 10v6M10 10v6M14 10v6M18 10v6"/><path d="M4 20h16M4.5 17h15"/></symbol>
+  <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 10v11"/><path d="M16.5 3c-1.5 0-2.5 1.8-2.5 4.5S15 12 16.5 12 19 10.2 19 7.5 18 3 16.5 3zM16.5 12v9"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></symbol>
+  <symbol id="i-google" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></symbol>
+  <symbol id="i-airbnb" viewBox="0 0 32 32"><path d="M29.5 22.3c-.4-1-.75-1.9-1.18-2.74v-.04c-2.36-5-4.55-9.5-6.63-13.55l-.14-.2C20.07 3.7 19 1.9 15.92 1.9c-3.05 0-4.34 2.1-5.67 4.87l-.1.2c-2.09 4.04-4.28 8.55-6.63 13.55v.07l-.7 1.52c-.26.63-.4.96-.43 1.06-.28.7-.44 1.5-.44 2.33 0 3.53 2.86 6.39 6.39 6.39h.06c.12 0 .23-.01.34-.04h.46c2.74-.57 5.07-2.06 6.71-4.12 1.66 2.08 3.98 3.57 6.65 4.13h.54c3.5 0 6.35-2.83 6.38-6.32 0-.84-.16-1.64-.46-2.38zm-13.5 1.54c-1.37-1.54-2.4-3.4-2.99-5.47a3.7 3.7 0 0 1-.2-1.17c0-.7.21-1.37.57-1.93.54-.8 1.45-1.32 2.48-1.32h.35c1.03 0 1.94.53 2.47 1.33.35.54.56 1.2.56 1.9 0 .43-.07.83-.2 1.2-.63 2.16-1.66 4.02-3.03 5.6z"/></symbol>
+</svg>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header dark" id="siteHeader">
+  <a href="jmgnest-homepage-mockup.html" class="wordmark"><span class="mark"><img src="data:image/png;base64,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" alt="JMG Nest" style="width:30px;height:30px;object-fit:contain"></span> JMG Nest</a>
+  <nav class="nav-pills">
+    <a href="jmgnest-homepage-mockup.html">Home</a>
+    <a href="jmgnest-gallery-mockup.html">Gallery</a>
+    <a href="jmgnest-things-to-do-mockup.html" class="active">Things to Do</a>
+    <a href="jmgnest-units-mockup.html">Our Units</a>
+    <a href="jmgnest-contact-mockup.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ============ COMPACT HERO ============ -->
+<header class="t-hero dark">
+  <div class="th-bg">
+    <img src="things-to-do-images/hero.jpg" onerror="this.onerror=null;this.src='https://res.cloudinary.com/jmg-nest/image/upload/f_auto,q_auto,w_1600/main-patio-1.jpg'" alt="Golden light over La Trinidad Valley near JMG Nest">
+  </div>
+  <div class="th-scrim"></div>
+  <div class="th-inner">
+    <p class="eyebrow" style="color:var(--gold-2)">Things to Do</p>
+    <h1 class="th-title">The valley, right outside your door</h1>
+    <p class="th-lead">Strawberry farms, mountain parks, museums, and Baguio's markets are all a short drive away. Browse by what you are in the mood for, then map your route from the nest.</p>
+    <div class="th-stats">
+      <span class="th-stat"><svg class="ic"><use href="#i-compass"/></svg><strong>12</strong> curated spots</span>
+      <span class="sep"></span>
+      <span class="th-stat"><svg class="ic"><use href="#i-clock"/></svg><strong>15</strong> min to Baguio City</span>
+      <span class="sep"></span>
+      <span class="th-stat"><svg class="ic"><use href="#i-mountain"/></svg>La Trinidad Valley</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ FILTER BAR ============ -->
+<section class="filter-bar" id="browse" aria-label="Filter the activities">
+  <div class="wrap filter-inner">
+    <div class="filter-group">
+      <span class="filter-lbl">Interest</span>
+      <div class="chip-row" id="cat-filters" role="group" aria-label="Filter by category">
+        <button type="button" class="fchip active" data-val="all">All</button>
+        <button type="button" class="fchip" data-val="culture">Culture</button>
+        <button type="button" class="fchip" data-val="nature">Nature</button>
+        <button type="button" class="fchip" data-val="adventure">Adventure</button>
+        <button type="button" class="fchip" data-val="food">Food</button>
+        <button type="button" class="fchip" data-val="shopping">Shopping</button>
+      </div>
+    </div>
+    <p class="filter-count" id="filter-count"><b>12</b> places</p>
+  </div>
+</section>
+
+<!-- ============ ACTIVITY GRID ============ -->
+<section class="acts-sec">
+  <div class="wrap">
+    <div class="acts-grid" id="acts-grid"></div>
+  </div>
+</section>
+
+<!-- ============ STORIES & GUIDES (blog posts) ============ -->
+<section class="sec guides-sec" id="guides">
+  <div class="wrap">
+    <div class="guides-head reveal">
+      <div class="gh-copy">
+        <p class="eyebrow">Stories &amp; guides</p>
+        <h2 class="display h2">Notes from the valley</h2>
+        <p class="lead">Longer reads on the places worth your time, written and kept up to date by the JMG Nest team. New guides are added through the year.</p>
+      </div>
+      <a href="#" class="btn-text">Browse all guides <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+    </div>
+    <div class="guide-grid">
+      <!-- Post 1 -->
+      <article class="guide-card reveal d1">
+        <a href="#" class="g-thumb"><img src="things-to-do-images/strawberry-farm.jpg" alt="Strawberry fields at sunrise in La Trinidad" loading="lazy"><span class="g-badge">Nature</span></a>
+        <div class="g-body">
+          <div class="g-byline">JMG Nest <span class="dot"></span> Aug 28, 2026</div>
+          <h3><a href="#">A slow morning at the strawberry farms</a></h3>
+          <p class="g-excerpt">When to arrive, what is in season, and why sunrise is the sweetest hour to pick your own in La Trinidad Valley.</p>
+          <div class="g-foot">
+            <div class="g-tags">
+              <span class="g-tag"><svg class="ic"><use href="#i-pin"/></svg>approx. 2 km</span>
+              <span class="g-tag"><svg class="ic"><use href="#i-clock"/></svg>4 min read</span>
+            </div>
+            <a href="#" class="btn-text">Read guide <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+          </div>
+        </div>
+      </article>
+      <!-- Post 2 -->
+      <article class="guide-card reveal d2">
+        <a href="#" class="g-thumb"><img src="things-to-do-images/baguio-public-market.jpg" alt="Stalls at Baguio Public Market" loading="lazy"><span class="g-badge">Food</span></a>
+        <div class="g-body">
+          <div class="g-byline">JMG Nest <span class="dot"></span> Aug 15, 2026</div>
+          <h3><a href="#">A first-timer's guide to Baguio Public Market</a></h3>
+          <p class="g-excerpt">Fresh highland produce, local coffee, and the best stalls for pasalubong, mapped out for an easy first visit.</p>
+          <div class="g-foot">
+            <div class="g-tags">
+              <span class="g-tag"><svg class="ic"><use href="#i-pin"/></svg>approx. 4 km</span>
+              <span class="g-tag"><svg class="ic"><use href="#i-clock"/></svg>6 min read</span>
+            </div>
+            <a href="#" class="btn-text">Read guide <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+          </div>
+        </div>
+      </article>
+      <!-- Post 3 -->
+      <article class="guide-card reveal d3">
+        <a href="#" class="g-thumb"><img src="things-to-do-images/mt-kalugong.jpg" alt="Limestone rock formations at Mt. Kalugong" loading="lazy"><span class="g-badge">Adventure</span></a>
+        <div class="g-body">
+          <div class="g-byline">JMG Nest <span class="dot"></span> Jul 30, 2026</div>
+          <h3><a href="#">Chasing the view from Mt. Kalugong</a></h3>
+          <p class="g-excerpt">A short, rewarding climb over limestone rock gardens, with tips on timing, footwear, and the best photo spots.</p>
+          <div class="g-foot">
+            <div class="g-tags">
+              <span class="g-tag"><svg class="ic"><use href="#i-pin"/></svg>approx. 5 km</span>
+              <span class="g-tag"><svg class="ic"><use href="#i-clock"/></svg>5 min read</span>
+            </div>
+            <a href="#" class="btn-text">Read guide <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION (Google Maps) ============ -->
+<section class="sec" id="location">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow">Getting around</p>
+      <h2 class="display h2">Close to everything, far from the noise</h2>
+      <p class="lead">The nest sits above La Trinidad Valley, a quiet fifteen minutes from the heart of Baguio City. Most of these spots are an easy drive or a short ride away.</p>
+    </div>
+    <div class="loc-split">
+      <div class="loc-map reveal">
+        <iframe title="Nearby Attractions Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=tourist%20attractions%20near%20La%20Trinidad%20Benguet&output=embed"></iframe>
+        <div class="map-cta">
+          <a href="https://www.google.com/maps/search/?api=1&query=tourist+attractions+near+La+Trinidad+Benguet" target="_blank" rel="noopener noreferrer" class="btn-text">Open in Google Maps <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </div>
+      <div class="loc-info reveal d1">
+        <h3 class="display h3">Good to know</h3>
+        <p class="lead">A few things that make day trips from the nest easy.</p>
+        <div class="loc-fact"><div class="lf-ic"><svg class="ic"><use href="#i-pin"/></svg></div><div><h4>Central to it all</h4><p>La Trinidad Valley, Benguet &middot; minutes from Baguio City proper</p></div></div>
+        <div class="loc-fact"><div class="lf-ic"><svg class="ic"><use href="#i-house"/></svg></div><div><h4>Free private parking</h4><p>Leave early, beat the traffic, and keep the car close</p></div></div>
+        <div class="loc-fact"><div class="lf-ic"><svg class="ic"><use href="#i-chat"/></svg></div><div><h4>Local tips on request</h4><p>Our host team is happy to map a route or suggest a favorite</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLAN YOUR DAY (light band) ============ -->
+<section class="sec plan-sec">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow">Plan your day</p>
+      <h2 class="display h2">A gentle way to spend it</h2>
+      <p class="lead">No rush. Here is one easy rhythm that works well from the nest.</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-card reveal d1">
+        <div class="pc-ic"><svg class="ic"><use href="#i-coffee"/></svg></div>
+        <p class="pc-when">Morning</p>
+        <h4>Start slow, then wander</h4>
+        <p>Coffee on the porch, then a short drive to the strawberry farm before the crowds. Cool air and clear mountain light make it the best window for photos.</p>
+      </div>
+      <div class="plan-card reveal d2">
+        <div class="pc-ic"><svg class="ic"><use href="#i-tree"/></svg></div>
+        <p class="pc-when">Afternoon</p>
+        <h4>Parks and viewpoints</h4>
+        <p>Boating at Burnham Park, panoramas at Mines View, or a quiet hour at a museum. Pace it gently &middot; the valley rewards a slower afternoon.</p>
+      </div>
+      <div class="plan-card reveal d3">
+        <div class="pc-ic"><svg class="ic"><use href="#i-utensils"/></svg></div>
+        <p class="pc-when">Evening</p>
+        <h4>Market bites and home</h4>
+        <p>Wind down along Session Road, pick up ube jam and produce at the market, then head back up to the quiet for the night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<section class="t-cta dark">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--gold)">Ready when you are</p>
+    <h2 class="display h2">Make the nest your base camp</h2>
+    <p class="lead">Everything worth seeing is a short drive from your door. Pick the unit that fits your group and settle in above the La Trinidad valley, fifteen minutes from Baguio City.</p>
+    <div class="t-cta-actions">
+      <a href="jmgnest-units-mockup.html#book" class="btn btn-gold">Check availability <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      <a href="jmgnest-units-mockup.html" class="btn btn-ghost">View all units <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="footer" class="dark">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>About JMG Nest</h4>
+        <p class="about-blurb">Your cozy mountain retreat in La Trinidad Valley, just 15 minutes from Baguio City. Luxury, comfort, and breathtaking views.</p>
+        <div class="foot-logo">JMG Nest</div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="jmgnest-about-mockup.html">About Us</a></li>
+          <li><a href="jmgnest-gallery-mockup.html">Gallery</a></li>
+          <li><a href="jmgnest-things-to-do-mockup.html">Things to Do</a></li>
+          <li><a href="jmgnest-units-mockup.html#book">Book Now</a></li>
+          <li><a href="jmgnest-units-mockup.html#compare">Compare Units</a></li>
+          <li><a href="jmgnest-contact-mockup.html">Contact</a></li>
+          <li><a href="jmgnest-faq-mockup.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul class="foot-contact">
+          <li><svg class="ic"><use href="#i-pin"/></svg><span>La Trinidad Valley, Benguet, Philippines</span></li>
+          <li><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:info@jmgnest.com">info@jmgnest.com</a></li>
+          <li><svg class="ic"><use href="#i-chat"/></svg><a href="#">Message us directly</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Where to Find Us</h4>
+        <div class="socials">
+          <a href="#" aria-label="Google"><svg class="ic ic-fill"><use href="#i-google"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg class="ic ic-fill"><use href="#i-facebook"/></svg></a>
+          <a href="#" aria-label="Airbnb"><svg class="ic ic-fill"><use href="#i-airbnb"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-legal">
+        <a href="#">Privacy Policy</a><span class="sep">/</span>
+        <a href="#">Terms of Service</a><span class="sep">/</span>
+        <a href="#">Cookie Policy</a><span class="sep">/</span>
+        <a href="#">Disclaimer</a>
+      </div>
+      <div class="foot-copy">&copy; 2026 JMG Nest. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- Activity data ----
+  // The first three are the canonical attractions from lib/data.ts getAttractions().
+  // The rest are well-known La Trinidad / Baguio spots added to fill out the page;
+  // distances and travel times marked "approx." are estimated and on-brand honest.
+  var CAT_LABELS = { culture:'Culture', nature:'Nature', adventure:'Adventure', food:'Food', shopping:'Shopping' };
+
+  var ACTIVITIES = [
+    // --- Canonical (from data) ---
+    { name:'Igorot Stone Kingdom', cat:'culture', icon:'i-landmark', dist:'5.2 km', time:'15 minutes', lat:16.3988, lng:120.6114,
+      desc:'Cultural heritage site showcasing the rich traditions and history of the Igorot people, set among stone structures with sweeping views.' },
+    { name:'Burnham Park', cat:'nature', icon:'i-tree', dist:'3.8 km', time:'20 minutes', lat:16.4030, lng:120.5956,
+      desc:'Baguio’s historic central park with a man-made lake for boating, gardens, and easy walking paths, right in the heart of the city.' },
+    { name:'Session Road', cat:'shopping', icon:'i-bag', dist:'4.1 km', time:'25 minutes', lat:16.4031, lng:120.5934,
+      desc:'The city’s main commercial street, lined with shops, cafes, and restaurants. The best place to feel Baguio’s everyday buzz.' },
+    // --- Enriched local spots ---
+    { name:'Strawberry Farm', cat:'food', icon:'i-berry', dist:'approx. 2 km', time:'approx. 10 minutes', lat:16.4548, lng:120.5883,
+      desc:'La Trinidad’s famous strawberry fields. Pick your own in season, then try strawberry taho and fresh farm produce from the stalls.' },
+    { name:'Mines View Park', cat:'nature', icon:'i-mountain', dist:'approx. 8 km', time:'approx. 35 minutes', lat:16.4188, lng:120.6297,
+      desc:'A classic Baguio viewpoint over the old mining valley and mountain ranges, with local crafts and warm wraps for the cool breeze.' },
+    { name:'BenCab Museum', cat:'culture', icon:'i-landmark', dist:'approx. 12 km', time:'approx. 30 minutes', lat:16.3792, lng:120.5306,
+      desc:'National Artist Benedicto Cabrera’s museum on Asin Road, with Cordillera art, galleries, gardens, and a cafe overlooking the ravine.' },
+    { name:'Camp John Hay', cat:'adventure', icon:'i-tree', dist:'approx. 7 km', time:'approx. 30 minutes', lat:16.3939, lng:120.6194,
+      desc:'Pine-shaded forest trails, the tree-top adventure course, and open lawns. A calm, cool escape wrapped in Benguet pines.' },
+    { name:'Mt. Kalugong', cat:'adventure', icon:'i-compass', dist:'approx. 5 km', time:'approx. 20 minutes', lat:16.4720, lng:120.5850,
+      desc:'A short, rewarding climb over limestone rock formations in La Trinidad, with a pine garden and valley views at the top.' },
+    { name:'Baguio Public Market', cat:'shopping', icon:'i-bag', dist:'approx. 4 km', time:'approx. 25 minutes', lat:16.4165, lng:120.5960,
+      desc:'A lively maze of stalls for fresh produce, highland vegetables, coffee, woven goods, and pasalubong to take home.' },
+    { name:'Good Shepherd Convent', cat:'food', icon:'i-utensils', dist:'approx. 8 km', time:'approx. 34 minutes', lat:16.4128, lng:120.6310,
+      desc:'Home of the beloved ube jam and peanut brittle, made by the sisters. Come early on weekends before the favorites sell out.' },
+    { name:'The Mansion', cat:'culture', icon:'i-landmark', dist:'approx. 8 km', time:'approx. 33 minutes', lat:16.4090, lng:120.6280,
+      desc:'The official summer residence of the President, known for its grand gate and manicured grounds, a short stop near Wright Park.' },
+    { name:'Wright Park', cat:'nature', icon:'i-tree', dist:'approx. 8 km', time:'approx. 33 minutes', lat:16.4106, lng:120.6266,
+      desc:'The Pool of Pines promenade and pony rides for the kids, framed by tall trees just across from The Mansion.' }
+  ];
+
+  var grid = document.getElementById('acts-grid');
+  var countEl = document.getElementById('filter-count');
+  var state = { cat:'all' };
+
+  function matches(a){ return state.cat === 'all' || a.cat === state.cat; }
+  function mapUrl(a){ return 'https://www.google.com/maps/search/?api=1&query=' + a.lat + ',' + a.lng; }
+  function slug(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
+  function imgUrl(a){ return 'things-to-do-images/' + slug(a.name) + '.jpg'; }
+
+  function render(){
+    var current = ACTIVITIES.filter(matches);
+    grid.innerHTML = '';
+    if(current.length === 0){
+      grid.innerHTML = '<p class="acts-empty">Nothing in that category yet. Try another interest.</p>';
+    } else {
+      current.forEach(function(a){
+        var card = document.createElement('a');
+        card.className = 'act-card';
+        card.href = mapUrl(a);
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
+        card.setAttribute('aria-label', 'Get directions to ' + a.name);
+        card.innerHTML =
+          '<span class="act-ph"><svg class="ic"><use href="#' + a.icon + '"/></svg></span>' +
+          '<img class="act-photo" src="' + imgUrl(a) + '" alt="' + a.name + '" loading="lazy" onerror="this.remove()">' +
+          '<span class="act-scrim"></span>' +
+          '<span class="act-top">' +
+            '<span class="act-tag">' + CAT_LABELS[a.cat] + '</span>' +
+            '<span class="act-dist"><svg class="ic"><use href="#i-pin"/></svg>' + a.dist + '</span>' +
+          '</span>' +
+          '<span class="act-body">' +
+            '<span class="act-name">' + a.name + '</span>' +
+            '<span class="act-meta"><span><svg class="ic"><use href="#i-clock"/></svg>' + a.time + '</span></span>' +
+            '<span class="act-cta">Get directions <svg class="ic"><use href="#i-arrow-right"/></svg></span>' +
+          '</span>';
+        grid.appendChild(card);
+      });
+      // staged fade-in
+      requestAnimationFrame(function(){
+        var cards = grid.querySelectorAll('.act-card');
+        cards.forEach(function(c, i){
+          setTimeout(function(){ c.classList.add('shown'); }, Math.min(i * 55, 480));
+        });
+      });
+    }
+    var n = current.length;
+    countEl.innerHTML = '<b>' + n + '</b> ' + (n === 1 ? 'place' : 'places');
+  }
+
+  // ---- Filter chips ----
+  document.querySelectorAll('#cat-filters .fchip').forEach(function(chip){
+    chip.addEventListener('click', function(){
+      state.cat = chip.dataset.val;
+      document.querySelectorAll('#cat-filters .fchip').forEach(function(c){
+        c.classList.toggle('active', c === chip);
+      });
+      render();
+    });
+  });
+
+  // ---- Header solid on scroll ----
+  var header = document.getElementById('siteHeader');
+  function onScroll(){ header.classList.toggle('solid', window.scrollY > 60); }
+  window.addEventListener('scroll', onScroll); onScroll();
+
+  // ---- Reveal on scroll ----
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // ---- Init ----
+  render();
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "jmgnest-seo-agent",
+  "version": "1.0.0",
+  "description": "Automated SEO content pipeline for JMG Nest blog",
+  "type": "module",
+  "main": "agent.js",
+  "scripts": {
+    "start": "node agent.js",
+    "test": "node agent.js --dry-run"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {}
+}
