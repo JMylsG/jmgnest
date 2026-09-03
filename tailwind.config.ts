@@ -9,19 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'forest-green': '#1E3D34',
+        // Deep green — kept as ink / logo accent (mockup body ink is a dark forest green)
+        'forest-green': '#22342C',
         'warm-sage': '#D9C7B8',
         'warm-sage-dark': '#B8A08F', // Darker variant for better text contrast (WCAG AA compliant)
-        'cream': '#FAF9F6',
+        // Warm cream light ground (mockup --bg). Also reads as light text on espresso.
+        'cream': '#ECE3CF',
+        'cream-on-dark': '#F3F1EA', // crisp light text on espresso bookends
+        // Gold accent (mockup gold). warm-gold* kept for existing usages.
         'warm-gold': '#C49863',
-        'warm-gold-dark': '#A87B4A', // Darker variant for better text contrast on light backgrounds
-        'text-primary': '#1E3D34',
-        'text-secondary': '#5A6B64',
-        'text-tertiary': '#8A9A93',
-        'border-light': '#E8E4DF',
-        'background-section': '#FFFFFF',
-        'background-subtle': '#F5F3F0',
-        'background-dark': '#1E3D34',
+        'warm-gold-dark': '#A87B4A',
+        'gold': '#A97A3C',
+        'gold-2': '#C49863',
+        // Espresso — the dark bookends (hero / CTA / footer)
+        'espresso': '#17120c',
+        'espresso-2': '#1e1810',
+        'panel-dark': '#241d15',
+        'panel-dark-2': '#2b2318',
+        // Green accent — iconography + selection (forest for light, sage for dark)
+        'green-accent': '#2E5D4E',
+        'sage-accent': '#7FB89C',
+        // Semantic
+        'text-primary': '#22342C',
+        'text-secondary': '#586A62',
+        'text-tertiary': '#8A9A92',
+        'border-light': '#E1D6C2',
+        'background-section': '#FAF4E9',
+        'background-subtle': '#F3EBDB',
+        'background-panel': '#EFE6D4',
+        'background-dark': '#17120c', // espresso (was forest-green)
       },
       fontFamily: {
         serif: ['var(--font-crimson)', 'Georgia', 'Times New Roman', 'serif'],
@@ -37,10 +53,10 @@ const config: Config = {
         'small': 'clamp(0.75rem, 1.25vw, 0.875rem)',
       },
       boxShadow: {
-        'sm': '0 2px 8px rgba(30, 61, 52, 0.08)',
-        'md': '0 4px 16px rgba(30, 61, 52, 0.12)',
-        'lg': '0 8px 24px rgba(30, 61, 52, 0.16)',
-        'xl': '0 12px 32px rgba(30, 61, 52, 0.2)',
+        'sm': '0 2px 8px rgba(30, 20, 10, 0.07)',
+        'md': '0 6px 20px rgba(30, 20, 10, 0.10)',
+        'lg': '0 12px 34px rgba(30, 20, 10, 0.14)',
+        'xl': '0 20px 55px rgba(30, 20, 10, 0.16)',
       },
       spacing: {
         'xs': '4px',
