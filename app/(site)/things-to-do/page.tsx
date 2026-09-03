@@ -1,8 +1,10 @@
 import Card from '@/components/cards/Card'
 import ImageCard from '@/components/cards/ImageCard'
+import Hero from '@/components/sections/Hero'
 import { sanityClient } from '@/lib/sanity.client'
 import { allPostsQuery, allCategoriesQuery, postsByCategoryQuery } from '@/lib/sanity.queries'
 import Link from 'next/link'
+import { MapPin, Clock } from 'lucide-react'
 
 export const revalidate = 3600
 
@@ -61,18 +63,17 @@ export default async function ThingsToDoPage({ searchParams }: ThingsToDoPagePro
   ])
 
   return (
+    <>
+    <Hero
+      eyebrow="Things to Do"
+      title="The valley, right outside your door"
+      subtitle="Discover attractions, activities, and experiences near JMG Nest"
+      imageUrl="https://res.cloudinary.com/jmg-nest/image/upload/v1762669722/Baguio_tfutl3.jpg"
+      imageAlt="Baguio City and La Trinidad Valley near JMG Nest"
+      ctaText=""
+    />
     <section className="py-20 px-6 bg-cream">
       <div className="max-w-[1400px] mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-serif font-normal text-forest-green mb-4">
-            Things to Do
-          </h1>
-          <p className="text-lg text-gray-600 font-sans max-w-2xl mx-auto">
-            Discover amazing attractions, activities, and experiences near JMG Nest
-          </p>
-        </div>
-
         {/* Categories Filter */}
         {categories && categories.length > 0 && (
           <div className="mb-12">
@@ -81,8 +82,8 @@ export default async function ThingsToDoPage({ searchParams }: ThingsToDoPagePro
                 href="/things-to-do"
                 className={`px-4 py-2 rounded-full border-2 transition-colors font-sans text-sm ${
                   !selectedCategory
-                    ? 'bg-forest-green text-white border-forest-green'
-                    : 'border-forest-green text-forest-green hover:bg-forest-green hover:text-white'
+                    ? 'bg-green-accent text-white border-green-accent'
+                    : 'border-border-light text-text-secondary hover:border-green-accent hover:text-green-accent'
                 }`}
               >
                 All Posts
@@ -92,7 +93,7 @@ export default async function ThingsToDoPage({ searchParams }: ThingsToDoPagePro
                   key={category._id}
                   href={`/things-to-do?category=${category.slug}`}
                   className={`px-4 py-2 rounded-full text-white transition-opacity font-sans text-sm ${
-                    selectedCategory === category.slug ? 'ring-2 ring-offset-2 ring-forest-green' : 'hover:opacity-90'
+                    selectedCategory === category.slug ? 'ring-2 ring-offset-2 ring-green-accent' : 'hover:opacity-90'
                   }`}
                   style={{ backgroundColor: category.color || '#C49863' }}
                 >
@@ -172,13 +173,13 @@ export default async function ThingsToDoPage({ searchParams }: ThingsToDoPagePro
                   {(post.distance || post.travelTime) && (
                     <div className="flex flex-wrap gap-3 text-sm text-gray-600">
                       {post.distance && (
-                        <span className="flex items-center gap-1">
-                          📍 {post.distance}
+                        <span className="flex items-center gap-1.5">
+                          <MapPin className="w-4 h-4 text-green-accent" /> {post.distance}
                         </span>
                       )}
                       {post.travelTime && (
-                        <span className="flex items-center gap-1">
-                          🕐 {post.travelTime}
+                        <span className="flex items-center gap-1.5">
+                          <Clock className="w-4 h-4 text-green-accent" /> {post.travelTime}
                         </span>
                       )}
                     </div>
@@ -207,5 +208,6 @@ export default async function ThingsToDoPage({ searchParams }: ThingsToDoPagePro
         )}
       </div>
     </section>
+    </>
   )
 }
