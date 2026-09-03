@@ -55,7 +55,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   return (
     <div
       ref={modalRef}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-forest-green/80 backdrop-blur-sm p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-espresso/80 backdrop-blur-sm p-4"
       onClick={handleBackdropClick}
     >
       <div

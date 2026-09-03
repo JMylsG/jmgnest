@@ -116,7 +116,7 @@ export default function BookingForm({
         )}
 
         {success && (
-          <div className="p-4 bg-forest-green/10 border border-forest-green rounded-lg">
+          <div className="p-4 bg-green-accent/10 border border-green-accent rounded-lg">
             <p className="text-forest-green text-sm">
               Booking request submitted successfully! We'll get back to you soon.
             </p>

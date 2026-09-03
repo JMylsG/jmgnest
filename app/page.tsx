@@ -847,8 +847,8 @@ export default function HomePage() {
                       onClick={() => goToImage(index)}
                       className={`w-full aspect-square rounded-lg overflow-hidden border-2 transition-all ${
                         index === currentIndex
-                          ? 'border-forest-green shadow-lg'
-                          : 'border-transparent hover:border-forest-green hover:border-opacity-50'
+                          ? 'border-green-accent shadow-lg'
+                          : 'border-transparent hover:border-green-accent hover:border-opacity-50'
                       }`}
                       aria-label={`View image ${index + 1}`}
                     >

@@ -78,7 +78,7 @@ export default function BookingOptions({ unit, checkIn, checkOut, className }: B
         )}
 
         {/* Option 3: Facebook Messenger (Featured) */}
-        <div className="relative flex flex-col items-center text-center p-6 rounded-xl border-2 border-forest-green bg-warm-sage bg-opacity-10 hover:bg-opacity-20 transition-colors">
+        <div className="relative flex flex-col items-center text-center p-6 rounded-xl border-2 border-green-accent bg-green-accent bg-opacity-5 hover:bg-opacity-10 transition-colors">
           {/* Badge */}
           <div className="absolute -top-3 right-4">
             <Badge variant="accent">💰 Best Rate - Direct Booking</Badge>

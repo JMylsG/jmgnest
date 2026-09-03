@@ -24,7 +24,7 @@ export default function ImageCard({ src, alt, title, description, href, classNam
           className="object-cover transition-transform duration-[400ms] group-hover:scale-105"
           fallbackText="Image Coming Soon"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-green/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-espresso/85 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
       <div className="p-6">
         <h3 className="heading-h3 mb-2">

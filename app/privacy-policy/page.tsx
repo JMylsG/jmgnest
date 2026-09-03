@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="bg-cream min-h-screen">
       {/* Header */}
-      <section className="bg-forest-green text-cream py-16 px-6">
+      <section className="bg-espresso text-cream py-16 px-6">
         <div className="max-w-[1400px] mx-auto text-center">
           <h1 className="text-h1 font-serif font-semibold mb-4">Privacy Policy</h1>
           <p className="text-body text-cream opacity-90">Last Updated: December 1, 2025</p>

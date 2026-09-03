@@ -179,7 +179,7 @@ export default function FAQCarousel({ faqs, className }: FAQCarouselProps) {
             <>
               <button
                 onClick={goToPrevious}
-                className="absolute top-1/2 -translate-y-1/2 z-10 left-3 md:-left-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-forest-green text-white flex items-center justify-center shadow-md transition-all duration-200 hover:bg-warm-gold hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-warm-gold focus:ring-offset-2"
+                className="absolute top-1/2 -translate-y-1/2 z-10 left-3 md:-left-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-espresso text-white flex items-center justify-center shadow-md transition-all duration-200 hover:bg-warm-gold hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-warm-gold focus:ring-offset-2"
                 aria-label="Previous question"
               >
                 <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
@@ -187,7 +187,7 @@ export default function FAQCarousel({ faqs, className }: FAQCarouselProps) {
 
               <button
                 onClick={goToNext}
-                className="absolute top-1/2 -translate-y-1/2 z-10 right-3 md:-right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-forest-green text-white flex items-center justify-center shadow-md transition-all duration-200 hover:bg-warm-gold hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-warm-gold focus:ring-offset-2"
+                className="absolute top-1/2 -translate-y-1/2 z-10 right-3 md:-right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-espresso text-white flex items-center justify-center shadow-md transition-all duration-200 hover:bg-warm-gold hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-warm-gold focus:ring-offset-2"
                 aria-label="Next question"
               >
                 <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />

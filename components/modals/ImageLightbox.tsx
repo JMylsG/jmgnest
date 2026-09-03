@@ -70,13 +70,13 @@ export default function ImageLightbox({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-forest-green/95 backdrop-blur-md flex items-center justify-center"
+      className="fixed inset-0 z-50 bg-espresso/95 backdrop-blur-md flex items-center justify-center"
       onClick={onClose}
     >
       {/* Close Button */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 z-50 p-3 bg-forest-green/80 hover:bg-forest-green text-cream rounded-full transition-colors duration-200"
+        className="absolute top-4 right-4 z-50 p-3 bg-espresso/80 hover:bg-espresso text-cream rounded-full transition-colors duration-200"
         aria-label="Close lightbox"
       >
         <X className="w-6 h-6" />
@@ -90,7 +90,7 @@ export default function ImageLightbox({
               e.stopPropagation()
               navigate('prev')
             }}
-            className="absolute left-4 z-50 p-3 bg-forest-green/80 hover:bg-forest-green text-cream rounded-full transition-colors duration-200"
+            className="absolute left-4 z-50 p-3 bg-espresso/80 hover:bg-espresso text-cream rounded-full transition-colors duration-200"
             aria-label="Previous image"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -100,7 +100,7 @@ export default function ImageLightbox({
               e.stopPropagation()
               navigate('next')
             }}
-            className="absolute right-4 z-50 p-3 bg-forest-green/80 hover:bg-forest-green text-cream rounded-full transition-colors duration-200"
+            className="absolute right-4 z-50 p-3 bg-espresso/80 hover:bg-espresso text-cream rounded-full transition-colors duration-200"
             aria-label="Next image"
           >
             <ChevronRight className="w-6 h-6" />
@@ -125,7 +125,7 @@ export default function ImageLightbox({
           />
         </div>
         {currentImage.caption && (
-          <div className="mt-4 px-4 py-2 bg-forest-green/80 rounded-lg backdrop-blur-sm">
+          <div className="mt-4 px-4 py-2 bg-espresso/80 rounded-lg backdrop-blur-sm">
             <p className="text-cream text-body text-center">{currentImage.caption}</p>
           </div>
         )}

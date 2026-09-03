@@ -332,7 +332,7 @@ export default function AvailabilityDatePicker({
             value
               ? 'border-forest-green bg-white text-forest-green'
               : 'border-border-light bg-white text-text-secondary hover:border-warm-sage',
-            isOpen && 'border-forest-green ring-2 ring-forest-green/10'
+            isOpen && 'border-green-accent ring-2 ring-green-accent/15'
           )}
           aria-expanded={isOpen}
           aria-haspopup="dialog"
@@ -453,7 +453,7 @@ export default function AvailabilityDatePicker({
                       'aspect-square min-h-[36px] w-full flex items-center justify-center text-sm font-medium rounded-lg transition-all duration-200 relative',
                       'border-2',
                       isSelected
-                        ? 'bg-forest-green text-cream font-semibold border-forest-green shadow-md'
+                        ? 'bg-green-accent text-cream font-semibold border-green-accent shadow-md'
                         : isBlocked
                         ? 'bg-[#8B4513]/10 text-[#8B4513] cursor-not-allowed border-[#8B4513]/30'
                         : isDisabled
@@ -480,7 +480,7 @@ export default function AvailabilityDatePicker({
             {/* Legend */}
             <div className="mt-4 pt-4 border-t border-border-light flex items-center gap-4 text-xs text-text-secondary">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded bg-forest-green"></div>
+                <div className="w-3 h-3 rounded bg-green-accent"></div>
                 <span>Available</span>
               </div>
               <div className="flex items-center gap-2">

@@ -382,7 +382,7 @@ export default function UnitBookingContent({ unit }: UnitBookingContentProps) {
                   </div>
                 )}
                 {availabilityStatus === 'available' && (
-                  <div className="p-4 bg-forest-green/10 border border-forest-green rounded-lg">
+                  <div className="p-4 bg-green-accent/10 border border-green-accent rounded-lg">
                     <p className="text-sm text-forest-green font-sans font-medium">
                       Selected dates are available.
                     </p>
@@ -402,7 +402,7 @@ export default function UnitBookingContent({ unit }: UnitBookingContentProps) {
                     <button
                       type="button"
                       onClick={() => setGuests(Math.max(1, guests - 1))}
-                      className="w-12 h-12 rounded-full border-2 border-border-light flex items-center justify-center hover:border-forest-green transition-colors"
+                      className="w-12 h-12 rounded-full border-2 border-border-light flex items-center justify-center hover:border-green-accent transition-colors"
                     >
                       -
                     </button>
@@ -412,7 +412,7 @@ export default function UnitBookingContent({ unit }: UnitBookingContentProps) {
                     <button
                       type="button"
                       onClick={() => setGuests(Math.min(unit.capacity.guests, guests + 1))}
-                      className="w-12 h-12 rounded-full border-2 border-border-light flex items-center justify-center hover:border-forest-green transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-12 h-12 rounded-full border-2 border-border-light flex items-center justify-center hover:border-green-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                       disabled={guests >= unit.capacity.guests}
                     >
                       +

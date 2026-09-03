@@ -25,7 +25,7 @@ export default function CTASection({
   return (
     <section className={cn(
       'py-16 lg:py-24',
-      isDark ? 'bg-forest-green' : 'bg-background-subtle',
+      isDark ? 'bg-espresso' : 'bg-background-subtle',
       className
     )}>
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
