@@ -4,19 +4,6 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import MockupSprite from '@/components/MockupSprite'
 
-export interface GuidePost {
-  _id: string
-  title: string
-  slug: string
-  excerpt?: string
-  featuredImage?: { asset?: { url: string }; alt?: string }
-  author?: { name: string }
-  categories?: Array<{ title: string; slug: string; color?: string }>
-  distance?: string
-  travelTime?: string
-  publishedAt: string
-}
-
 type Activity = {
   name: string
   cat: 'culture' | 'nature' | 'adventure' | 'food' | 'shopping'
@@ -64,10 +51,7 @@ const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').repla
 const mapUrl = (a: Activity) => `https://www.google.com/maps/search/?api=1&query=${a.lat},${a.lng}`
 const imgUrl = (a: Activity) => `/things-to-do-images/${slugify(a.name)}.jpg`
 
-const fmtDate = (d: string) =>
-  new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-
-export default function ThingsToDoClient({ posts }: { posts: GuidePost[] }) {
+export default function ThingsToDoClient() {
   const [cat, setCat] = useState('all')
   const gridRef = useRef<HTMLDivElement>(null)
 
@@ -155,14 +139,7 @@ export default function ThingsToDoClient({ posts }: { posts: GuidePost[] }) {
               <p className="acts-empty">Nothing in that category yet. Try another interest.</p>
             ) : (
               current.map((a) => (
-                <a
-                  key={a.name}
-                  className="act-card"
-                  href={mapUrl(a)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Get directions to ${a.name}`}
-                >
+                <article key={a.name} className="act-card">
                   <span className="act-ph"><svg className="ic"><use href={`#${a.icon}`} /></svg></span>
                   <img
                     className="act-photo"
@@ -176,61 +153,18 @@ export default function ThingsToDoClient({ posts }: { posts: GuidePost[] }) {
                     <span className="act-tag">{CAT_LABELS[a.cat]}</span>
                     <span className="act-dist"><svg className="ic"><use href="#i-pin" /></svg>{a.dist}</span>
                   </span>
-                  <span className="act-body">
+                  <div className="act-body">
                     <span className="act-name">{a.name}</span>
-                    <span className="act-meta"><span><svg className="ic"><use href="#i-clock" /></svg>{a.time}</span></span>
-                    <span className="act-cta">Get directions <svg className="ic"><use href="#i-arrow-right" /></svg></span>
-                  </span>
-                </a>
+                    <div className="act-meta"><span><svg className="ic"><use href="#i-clock" /></svg>{a.time}</span></div>
+                    <div className="act-actions">
+                      <a className="act-cta" href={mapUrl(a)} target="_blank" rel="noopener noreferrer" aria-label={`Get directions to ${a.name}`}>Get directions <svg className="ic"><use href="#i-arrow-right" /></svg></a>
+                      <Link className="act-cta act-guide" href={`/things-to-do/${slugify(a.name)}`} aria-label={`Read the guide for ${a.name}`}>Read guide <svg className="ic"><use href="#i-book" /></svg></Link>
+                    </div>
+                  </div>
+                </article>
               ))
             )}
           </div>
-        </div>
-      </section>
-
-      {/* ============ STORIES & GUIDES (Sanity blog posts) ============ */}
-      <section className="sec guides-sec" id="guides">
-        <div className="wrap">
-          <div className="guides-head reveal">
-            <div className="gh-copy">
-              <p className="eyebrow">Stories &amp; guides</p>
-              <h2 className="display h2">Notes from the valley</h2>
-              <p className="lead">Longer reads on the places worth your time, written and kept up to date by the JMG Nest team. New guides are added through the year.</p>
-            </div>
-          </div>
-          {posts.length === 0 ? (
-            <div className="guides-empty reveal">
-              New guides from the valley are on the way. Check back soon for the team&apos;s latest notes and local tips.
-            </div>
-          ) : (
-            <div className="guide-grid">
-              {posts.map((post, i) => {
-                const badge = post.categories?.[0]?.title
-                return (
-                  <article key={post._id} className={`guide-card reveal d${Math.min(i + 1, 3)}`}>
-                    <Link href={`/things-to-do/${post.slug}`} className="g-thumb">
-                      {post.featuredImage?.asset?.url && (
-                        <img src={post.featuredImage.asset.url} alt={post.featuredImage.alt || post.title} loading="lazy" />
-                      )}
-                      {badge && <span className="g-badge">{badge}</span>}
-                    </Link>
-                    <div className="g-body">
-                      <div className="g-byline">{post.author?.name || 'JMG Nest'} <span className="dot" /> {fmtDate(post.publishedAt)}</div>
-                      <h3><Link href={`/things-to-do/${post.slug}`}>{post.title}</Link></h3>
-                      {post.excerpt && <p className="g-excerpt">{post.excerpt}</p>}
-                      <div className="g-foot">
-                        <div className="g-tags">
-                          {post.distance && <span className="g-tag"><svg className="ic"><use href="#i-pin" /></svg>{post.distance}</span>}
-                          {post.travelTime && <span className="g-tag"><svg className="ic"><use href="#i-clock" /></svg>{post.travelTime}</span>}
-                        </div>
-                        <Link href={`/things-to-do/${post.slug}`} className="btn-text">Read guide <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
-                      </div>
-                    </div>
-                  </article>
-                )
-              })}
-            </div>
-          )}
         </div>
       </section>
 

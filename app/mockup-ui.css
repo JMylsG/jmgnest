@@ -613,10 +613,13 @@
 .mk .act-meta{display:flex;flex-wrap:wrap;gap:6px 16px}
 .mk .act-meta span{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;color:rgba(243,241,234,.84)}
 .mk .act-meta .ic{width:15px;height:15px;color:#7FB89C}
-.mk .act-cta{display:inline-flex;align-items:center;gap:8px;margin-top:13px;font-family:var(--sans);font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#C49863;opacity:0;transform:translateY(6px);transition:.28s}
-.mk .act-card:hover .act-cta{opacity:1;transform:none}
+.mk .act-actions{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin-top:13px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14)}
+.mk .act-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#C49863;transition:color .2s}
+.mk .act-cta:hover{color:#e2c093}
 .mk .act-cta .ic{width:1.2em;height:1.2em;transition:transform .25s}
-.mk .act-card:hover .act-cta .ic{transform:translateX(4px)}
+.mk .act-cta:hover .ic{transform:translateX(4px)}
+.mk .act-cta.act-guide .ic{transform:none}
+.mk .act-cta.act-guide:hover .ic{transform:translateY(-2px)}
 .mk .acts-empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted);font-style:italic}
 
 /* Stories & guides (blog posts) */
