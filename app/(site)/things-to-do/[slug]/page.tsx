@@ -7,6 +7,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import RelatedPosts from '@/components/blog/RelatedPosts'
+import { getLocalGuide, getLocalGuideSlugs } from '@/lib/guides'
+import LocalGuideArticle from '@/components/things-to-do/LocalGuide'
 
 // Create image URL builder
 const builder = imageUrlBuilder({
@@ -23,7 +25,8 @@ export const revalidate = 3600
 // Generate static paths for all posts
 export async function generateStaticParams() {
   const slugs = await sanityClient.fetch<string[]>(postSlugsQuery).catch(() => [])
-  return slugs.map((slug) => ({ slug }))
+  const all = new Set([...slugs, ...getLocalGuideSlugs()])
+  return Array.from(all).map((slug) => ({ slug }))
 }
 
 // PortableText components configuration for Sanity images
@@ -117,6 +120,10 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
     .catch(() => null)
 
   if (!post) {
+    const guide = getLocalGuide(slug)
+    if (guide) {
+      return { title: guide.metaTitle, description: guide.metaDescription }
+    }
     return {
       title: 'Post Not Found',
     }
@@ -164,6 +171,11 @@ export default async function PostPage({ params }: PostPageProps) {
     .catch(() => null)
 
   if (!post) {
+    // Fall back to a hand-written local guide when there is no Sanity post.
+    const guide = getLocalGuide(slug)
+    if (guide) {
+      return <LocalGuideArticle guide={guide} />
+    }
     notFound()
   }
 

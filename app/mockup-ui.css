@@ -917,3 +917,53 @@
 @media (max-width:860px){
   .mk .fh-inner{padding:120px 22px 40px}
 }
+
+/* ============================================================
+   LOCAL GUIDE PAGE  (components/things-to-do/LocalGuide.tsx)
+   Rendered on /things-to-do/[slug] for hand-written guides.
+   ============================================================ */
+
+/* Guide hero */
+.mk .gd-hero{position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:flex-end;min-height:clamp(360px,52vh,480px)}
+.mk .ghd-bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.mk .ghd-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.52) saturate(1.05) contrast(1.02);transform:scale(1.05);animation:scZoom 8s ease-out .1s forwards}
+.mk .ghd-scrim{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(9,12,10,.55) 0%,rgba(9,12,10,.2) 36%,rgba(9,12,10,.62) 74%,rgba(9,12,10,.96) 100%)}
+.mk .ghd-inner{width:100%;max-width:920px;margin:0 auto;padding:132px 40px 48px}
+.mk .gd-back{display:inline-flex;align-items:center;gap:7px;font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,241,234,.82);margin-bottom:22px;transition:.2s}
+.mk .gd-back .ic{width:16px;height:16px;transition:transform .2s}
+.mk .gd-back:hover{color:#C49863}
+.mk .gd-back:hover .ic{transform:translateX(-3px)}
+.mk .gd-title{font-family:var(--serif);color:#fff;font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.06;text-shadow:0 6px 60px rgba(0,0,0,.4);max-width:20ch}
+.mk .gd-lead-hero{color:rgba(243,241,234,.85);font-size:clamp(1rem,1.5vw,1.16rem);line-height:1.6;max-width:640px;margin:16px 0 22px}
+.mk .gd-meta{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}
+.mk .gd-meta span{display:inline-flex;align-items:center;gap:8px;color:rgba(243,241,234,.82);font-size:.84rem}
+.mk .gd-meta .ic{width:16px;height:16px;color:#7FB89C}
+
+/* Quick facts */
+.mk .gd-facts-sec{padding:clamp(34px,4vw,52px) 0 clamp(10px,2vw,20px)}
+.mk .gd-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:920px;margin:0 auto}
+.mk .gd-fact{display:flex;gap:15px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px;transition:.25s}
+.mk .gd-fact:hover{border-color:var(--line-2);background:var(--panel-2)}
+.mk .gd-fact .gf-ic{width:46px;height:46px;flex:none;border-radius:12px;background:var(--green-soft);color:var(--green);display:flex;align-items:center;justify-content:center}
+.mk .gd-fact .gf-ic .ic{width:22px;height:22px}
+.mk .gf-lbl{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.mk .gf-val{font-size:.9rem;color:var(--muted);line-height:1.55}
+
+/* Story body */
+.mk .gd-body-sec{padding:clamp(24px,3vw,40px) 0 clamp(48px,6vw,84px)}
+.mk .gd-body{max-width:760px;margin:0 auto}
+.mk .gd-section{margin-bottom:clamp(26px,3vw,40px)}
+.mk .gd-section h2{font-family:var(--serif);color:var(--cream);font-size:clamp(1.5rem,2.8vw,2rem);line-height:1.15;margin-bottom:14px}
+.mk .gd-section p{color:var(--muted);font-size:1.02rem;line-height:1.85;margin-bottom:16px}
+.mk .gd-section p:last-child{margin-bottom:0}
+.mk .gd-note{background:var(--green-soft);border:1px solid var(--line-2);border-radius:18px;padding:clamp(22px,3vw,30px);margin:clamp(30px,4vw,46px) 0 0}
+.mk .gd-note h3{display:flex;align-items:center;gap:10px;font-family:var(--serif);color:var(--cream);font-size:1.35rem;margin-bottom:12px}
+.mk .gd-note h3 .ic{width:22px;height:22px;color:var(--green)}
+.mk .gd-note p{color:var(--muted);font-size:.98rem;line-height:1.8;margin-bottom:14px}
+.mk .gd-note p:last-child{margin-bottom:0}
+.mk .gd-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(30px,4vw,44px)}
+
+@media (max-width:720px){
+  .mk .ghd-inner{padding:112px 22px 38px}
+  .mk .gd-facts{grid-template-columns:1fr}
+}
