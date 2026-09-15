@@ -9,7 +9,12 @@
     "lint": "next lint",
     "generate-favicons": "node scripts/generate-favicons.js",
     "generate-favicons-dark": "node scripts/generate-favicons-dark.js",
-    "generate-favicons-all": "npm run generate-favicons && npm run generate-favicons-dark"
+    "generate-favicons-all": "npm run generate-favicons && npm run generate-favicons-dark",
+    "build:worker": "opennextjs-cloudflare build",
+    "preview:worker": "opennextjs-cloudflare preview",
+    "deploy:worker": "opennextjs-cloudflare deploy",
+    "upload:worker": "opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "browserslist": [
     "defaults and supports es6-module",
@@ -17,6 +22,7 @@
     "not IE 11"
   ],
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.6",
     "@portabletext/react": "^3.2.4",
     "@sanity/client": "^6.29.1",
     "@sanity/icons": "^3.7.4",
@@ -47,6 +53,7 @@
     "sharp": "^0.33.0",
     "tailwindcss": "^3.4.0",
     "to-ico": "^1.1.5",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.132.0"
   }
 }

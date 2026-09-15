@@ -187,6 +187,10 @@ NEXT_PUBLIC_BASE_URL=https://jmgnest.com
 
 **Note**: The calendar IDs are already configured in the code, but you can override them using environment variables if needed.
 
+## Cloudflare deployment
+
+Use Cloudflare Workers with the OpenNext adapter. See [CLOUDFLARE_DEPLOYMENT.md](./CLOUDFLARE_DEPLOYMENT.md) for build settings and environment variables.
+
 ## Building for Production
 
 ```bash
