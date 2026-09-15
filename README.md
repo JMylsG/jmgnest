@@ -100,6 +100,20 @@ pnpm dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Optional Sanity CMS
+
+The site builds without Sanity credentials. Local attraction guides remain available;
+CMS-only articles are unavailable and `/studio` returns 404 until configured.
+To reconnect the existing CMS, add these build environment variables in Cloudflare:
+
+- `NEXT_PUBLIC_SANITY_PROJECT_ID`: the real project ID from Sanity
+- `NEXT_PUBLIC_SANITY_DATASET`: the existing dataset (usually `production`)
+- `NEXT_PUBLIC_SANITY_API_VERSION`: `2024-10-01`
+
+Redeploy after setting these values. The local value `devplaceholder` is treated
+as disabled. Studio users still need access to the Sanity project; its allowed
+origins may also need updating for the new deployment URL.
+
 ## Environment Variables
 
 Create a `.env.local` file in the root directory:

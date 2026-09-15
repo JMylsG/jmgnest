@@ -1,20 +1,17 @@
 import { createClient } from '@sanity/client'
 
 export const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || process.env.SANITY_API_VERSION || '2024-10-01'
-export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || process.env.SANITY_PROJECT_ID
+const configuredProjectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || process.env.SANITY_PROJECT_ID
+// The local development placeholder is not a real CMS project.
+export const projectId = configuredProjectId === 'devplaceholder' ? undefined : configuredProjectId
 export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || process.env.SANITY_DATASET || 'production'
 
-if (!projectId) {
-  // eslint-disable-next-line no-console
-  console.warn('Missing SANITY projectId. Set NEXT_PUBLIC_SANITY_PROJECT_ID or SANITY_PROJECT_ID in .env.local')
-}
-
-export const sanityClient = createClient({
+export const sanityClient = projectId ? createClient({
   projectId,
   dataset,
   apiVersion,
   useCdn: true,
   perspective: 'published',
-})
+}) : null
 
 

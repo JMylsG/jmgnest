@@ -1,10 +1,8 @@
-'use client'
-
-import { NextStudio } from 'next-sanity/studio'
-import config from '../../../sanity.config'
+import { notFound } from 'next/navigation'
+import StudioClient from './StudioClient'
 
 export default function StudioPage() {
-  return <NextStudio config={config} />
+  const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+  if (!projectId || projectId === 'devplaceholder') notFound()
+  return <StudioClient />
 }
-
-

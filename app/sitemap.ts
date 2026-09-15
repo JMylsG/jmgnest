@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { getUnits } from '@/lib/data'
 import { sanityClient } from '@/lib/sanity.client'
+import { getLocalGuideSlugs } from '@/lib/guides'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.jmgnest.com'
@@ -17,7 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // DYNAMICALLY FETCH BLOG POSTS FROM SANITY
   let blogPostUrls: MetadataRoute.Sitemap = []
   try {
-    const posts = await sanityClient.fetch<Array<{
+    const posts = (await sanityClient?.fetch<Array<{
       slug: string
       _updatedAt: string
       publishedAt: string
@@ -27,7 +28,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         _updatedAt,
         publishedAt
       }`
-    )
+    )) ?? []
     
     blogPostUrls = posts.map((post) => ({
       url: `${baseUrl}/things-to-do/${post.slug}`,
@@ -85,6 +86,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     ...blogPostUrls,
+    ...getLocalGuideSlugs()
+      .filter((slug) => !blogPostUrls.some((post) => post.url === `${baseUrl}/things-to-do/${slug}`))
+      .map((slug) => ({
+        url: `${baseUrl}/things-to-do/${slug}`,
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+      })),
     {
       url: `${baseUrl}/calendar`,
       lastModified: new Date(),

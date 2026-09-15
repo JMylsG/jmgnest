@@ -1,4 +1,4 @@
-import { sanityClient, projectId, dataset } from '@/lib/sanity.client'
+import { sanityClient } from '@/lib/sanity.client'
 import { postBySlugQuery, postSlugsQuery, relatedPostsQuery } from '@/lib/sanity.queries'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import imageUrlBuilder from '@sanity/image-url'
@@ -10,21 +10,14 @@ import RelatedPosts from '@/components/blog/RelatedPosts'
 import { getLocalGuide, getLocalGuideSlugs } from '@/lib/guides'
 import LocalGuideArticle from '@/components/things-to-do/LocalGuide'
 
-// Create image URL builder
-const builder = imageUrlBuilder({
-  projectId: projectId || '',
-  dataset: dataset || 'production',
-})
-
-function urlFor(source: any) {
-  return builder.image(source)
-}
+// Only create the image builder when the CMS is configured.
+const builder = sanityClient ? imageUrlBuilder(sanityClient) : null
 
 export const revalidate = 3600
 
 // Generate static paths for all posts
 export async function generateStaticParams() {
-  const slugs = await sanityClient.fetch<string[]>(postSlugsQuery).catch(() => [])
+  const slugs = (await sanityClient?.fetch<string[]>(postSlugsQuery).catch(() => [])) ?? []
   const all = new Set([...slugs, ...getLocalGuideSlugs()])
   return Array.from(all).map((slug) => ({ slug }))
 }
@@ -33,13 +26,13 @@ export async function generateStaticParams() {
 const portableTextComponents: PortableTextComponents = {
   types: {
     image: ({ value }) => {
-      if (!value?.asset) {
+      if (!value?.asset || !builder) {
         return null
       }
       
       // Build image URL using Sanity image URL builder
       // This works with both asset references and expanded asset objects
-      const imageUrl = urlFor(value.asset).width(1200).url()
+      const imageUrl = builder.image(value.asset).width(1200).url()
       
       // Get dimensions from metadata if available, otherwise use defaults
       const width = value.asset?.metadata?.dimensions?.width || 1200
@@ -116,7 +109,7 @@ interface PostPageProps {
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
   const { slug } = await params
   const post = await sanityClient
-    .fetch(postBySlugQuery, { slug })
+    ?.fetch(postBySlugQuery, { slug })
     .catch(() => null)
 
   if (!post) {
@@ -167,7 +160,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
 export default async function PostPage({ params }: PostPageProps) {
   const { slug } = await params
   const post = await sanityClient
-    .fetch(postBySlugQuery, { slug })
+    ?.fetch(postBySlugQuery, { slug })
     .catch(() => null)
 
   if (!post) {
@@ -182,7 +175,7 @@ export default async function PostPage({ params }: PostPageProps) {
   // Fetch related posts based on shared categories
   const categorySlugs = post.categories?.map((cat: any) => cat.slug) || []
   const relatedPosts =
-    categorySlugs.length > 0
+    sanityClient && categorySlugs.length > 0
       ? await sanityClient
           .fetch(relatedPostsQuery, {
             slug,
