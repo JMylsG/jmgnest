@@ -274,6 +274,21 @@
 .mk .book-dock{display:none}
 
 /* ============ RESPONSIVE ============ */
+/* Let large desktop layouts use the monitor without stretching indefinitely.
+   The two stages cover common 1080p, QHD, ultrawide, and 4K viewports. */
+@media (min-width:1800px){
+  .mk{--maxw:min(92vw,1920px)}
+  .mk .showcase{min-height:min(100svh,1200px)}
+  .mk .hero-book{right:calc((100vw - var(--maxw))/2 + 40px)}
+  .mk .choose-grid{grid-template-columns:repeat(4,1fr)}
+  .mk .library{height:clamp(560px,52vh,720px)}
+  .mk .bento{grid-auto-rows:minmax(220px,1fr)}
+}
+@media (min-width:2400px){
+  .mk{--maxw:min(86vw,2560px)}
+  .mk .library{height:clamp(600px,52vh,760px)}
+  .mk .bento{grid-auto-rows:minmax(250px,1fr)}
+}
 @media (max-width:1000px){
   .mk .hero-book{display:none}
   .mk .amenity-grid{grid-template-columns:1fr 1fr}
@@ -979,4 +994,14 @@
 @media (max-width:720px){
   .mk .ghd-inner{padding:112px 22px 38px}
   .mk .gd-facts{grid-template-columns:1fr}
+}
+
+/* These grids are declared later in this stylesheet, so their wide-screen
+   column counts live here to preserve the intended cascade. */
+@media (min-width:1800px){
+  .mk .gallery-grid{grid-template-columns:repeat(5,1fr)}
+  .mk .acts-grid,.mk .guide-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media (min-width:2400px){
+  .mk .gallery-grid,.mk .acts-grid{grid-template-columns:repeat(6,1fr)}
 }

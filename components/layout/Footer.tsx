@@ -50,7 +50,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#120d07] text-cream border-t border-white/10">
-      <div className="max-w-[1400px] mx-auto px-8 py-12">
+      <div className="site-footer-shell px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* About Column */}
           <div>

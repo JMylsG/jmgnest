@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+.site-nav-shell,
+.site-footer-shell,
+.site-breadcrumb-shell {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.site-footer-shell,
+.site-breadcrumb-shell {
+  max-width: 1400px;
+}
+
+@media (min-width: 1800px) {
+  .site-nav-shell,
+  .site-footer-shell,
+  .site-breadcrumb-shell {
+    max-width: min(92vw, 1920px);
+  }
+}
+
+@media (min-width: 2400px) {
+  .site-nav-shell,
+  .site-footer-shell,
+  .site-breadcrumb-shell {
+    max-width: min(86vw, 2560px);
+  }
+}
+
 @layer base {
   :root {
     --font-crimson: 'Crimson Text', Georgia, serif;
@@ -122,4 +150,3 @@
     @apply bg-warm-gold h-[3px] border-none my-10;
   }
 }
-

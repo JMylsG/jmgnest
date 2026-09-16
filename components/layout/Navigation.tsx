@@ -73,7 +73,7 @@ export default function Navigation() {
           ${getNavStyles()}
         `}
       >
-        <div className="w-full flex items-center justify-between px-6 md:px-12 lg:px-16">
+        <div className="site-nav-shell flex items-center justify-between px-6 md:px-12 lg:px-16">
           {/* Logo - Hidden on all devices when scrolled on home page */}
           <Link 
             href="/" 

@@ -48,7 +48,7 @@ export default function Breadcrumbs() {
   
   return (
     <nav aria-label="Breadcrumb" className="py-4 bg-background-subtle">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
+      <div className="site-breadcrumb-shell px-6 lg:px-8">
         <ol className="flex items-center gap-2 text-sm text-text-tertiary">
           {breadcrumbItems.map((item, index) => {
             const isLast = index === breadcrumbItems.length - 1
@@ -88,4 +88,3 @@ export default function Breadcrumbs() {
     </nav>
   )
 }
-
