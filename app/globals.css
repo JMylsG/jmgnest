@@ -9,9 +9,12 @@
   
   html {
     scroll-behavior: smooth;
+    /* Stop touch scrolling at the page boundary instead of exposing blank canvas. */
+    overscroll-behavior-y: none;
   }
   
   body {
+    overscroll-behavior-y: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
