@@ -36,8 +36,12 @@ Never commit secrets or `.env.local` to Git.
 
 Image optimization uses the Cloudflare `IMAGES` binding. Confirm Images is
 available in the account and review its usage pricing before the domain cutover.
-Persistent ISR caching is not configured initially: pages render on demand.
-R2-backed caching can be added later if needed.
+
+Sanity guide pages use OpenNext's read-only Workers Static Assets cache. This
+avoids paid R2 setup and keeps guide rendering out of the Worker's request CPU
+budget. Published CMS changes require a new Cloudflare deployment; connect a
+Sanity webhook to a Cloudflare deploy hook if automatic publishing is desired.
+R2-backed ISR caching can be added later if edits need to appear without a build.
 
 ## Verification and domain cutover
 

@@ -13,7 +13,10 @@ import LocalGuideArticle from '@/components/things-to-do/LocalGuide'
 // Only create the image builder when the CMS is configured.
 const builder = sanityClient ? imageUrlBuilder(sanityClient) : null
 
-export const revalidate = 3600
+// Guides are generated during deployment and served from Cloudflare Static
+// Assets. A new CMS post or edit becomes live with the next deployment.
+export const revalidate = false
+export const dynamicParams = false
 
 // Generate static paths for all posts
 export async function generateStaticParams() {
