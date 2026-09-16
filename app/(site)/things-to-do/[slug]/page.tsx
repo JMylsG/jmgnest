@@ -108,6 +108,7 @@ interface PostPageProps {
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
   const { slug } = await params
+  const canonicalPath = `/things-to-do/${slug}`
   const post = await sanityClient
     ?.fetch(postBySlugQuery, { slug })
     .catch(() => null)
@@ -115,7 +116,11 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
   if (!post) {
     const guide = getLocalGuide(slug)
     if (guide) {
-      return { title: guide.metaTitle, description: guide.metaDescription }
+      return {
+        title: guide.metaTitle,
+        description: guide.metaDescription,
+        alternates: { canonical: canonicalPath },
+      }
     }
     return {
       title: 'Post Not Found',
@@ -131,9 +136,11 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
     title: metaTitle,
     description: metaDescription,
     keywords: post.seo?.keywords || post.tags || [],
+    alternates: { canonical: canonicalPath },
     openGraph: {
       title: metaTitle,
       description: metaDescription,
+      url: canonicalPath,
       type: 'article',
       publishedTime: post.publishedAt,
       authors: post.author?.name ? [post.author.name] : [],

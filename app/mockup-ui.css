@@ -301,6 +301,19 @@
   .mk .wrap{padding:0 22px}
 }
 @media (max-width:600px){
+  .mk .sc-title{
+    font-size:clamp(6.75rem,34vw,9rem);
+    line-height:.76;
+    letter-spacing:-.045em;
+    opacity:1;
+    animation:none;
+  }
+  .mk .sc-title span{
+    opacity:0;
+    animation:scTitle 1s cubic-bezier(.16,.75,.24,1) both;
+  }
+  .mk .sc-title span:first-child{animation-delay:.65s}
+  .mk .sc-title span:last-child{animation-delay:.82s}
   .mk .amenity-grid,.mk .choose-grid{grid-template-columns:1fr}
   .mk .bento{grid-template-columns:1fr}
   .mk .tile.big,.mk .tile.span2{grid-column:span 1}
@@ -310,7 +323,7 @@
   .mk .qb-dot{display:none}
 }
 @media (prefers-reduced-motion:reduce){
-  .mk .sc-title,.mk .sc-reveal{animation:none;opacity:1}
+  .mk .sc-title,.mk .sc-title span,.mk .sc-reveal{animation:none;opacity:1}
   .mk .showcase-bg img{animation:none;transform:scale(1)}
   .mk .reveal{opacity:1;transform:none;transition:none}
 }

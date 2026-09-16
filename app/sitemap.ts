@@ -4,7 +4,7 @@ import { sanityClient } from '@/lib/sanity.client'
 import { getLocalGuideSlugs } from '@/lib/guides'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://www.jmgnest.com'
+  const baseUrl = 'https://jmgnest.com'
   
   const units = await getUnits()
   
@@ -125,4 +125,3 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 }
-

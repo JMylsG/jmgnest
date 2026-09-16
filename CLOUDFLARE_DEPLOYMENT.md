@@ -19,8 +19,9 @@ and `.open-next/assets`, both configured in `wrangler.jsonc`.
 
 ## Configuration
 
-Sanity is optional. To restore it, add the `NEXT_PUBLIC_SANITY_*` build variables
-listed in README.md, then redeploy.
+Published Sanity content uses the repository's public project defaults and requires
+no secret. The optional `NEXT_PUBLIC_SANITY_*` build variables listed in README.md
+only override those defaults; redeploy after changing an override.
 
 For availability, set `NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY` as a build variable
 and a runtime variable. Calendar ID overrides, if used, should also be available

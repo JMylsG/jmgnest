@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
 import StudioClient from './StudioClient'
+import { isSanityEnabled } from '@/lib/sanity.settings'
 
 export default function StudioPage() {
-  const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-  if (!projectId || projectId === 'devplaceholder') notFound()
+  if (!isSanityEnabled) notFound()
   return <StudioClient />
 }

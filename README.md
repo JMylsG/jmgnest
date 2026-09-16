@@ -100,19 +100,23 @@ pnpm dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Optional Sanity CMS
+## Sanity CMS
 
-The site builds without Sanity credentials. Local attraction guides remain available;
-CMS-only articles are unavailable and `/studio` returns 404 until configured.
-To reconnect the existing CMS, add these build environment variables in Cloudflare:
+The existing published guides are connected to Sanity project `6hp1010s` and its
+`production` dataset by default. These identifiers are public configuration, so no
+Sanity API secret is required to read the published articles or include them in the
+sitemap.
 
-- `NEXT_PUBLIC_SANITY_PROJECT_ID`: the real project ID from Sanity
-- `NEXT_PUBLIC_SANITY_DATASET`: the existing dataset (usually `production`)
-- `NEXT_PUBLIC_SANITY_API_VERSION`: `2024-10-01`
+The defaults can be overridden with these Cloudflare build variables:
 
-Redeploy after setting these values. The local value `devplaceholder` is treated
-as disabled. Studio users still need access to the Sanity project; its allowed
-origins may also need updating for the new deployment URL.
+- `NEXT_PUBLIC_SANITY_PROJECT_ID`
+- `NEXT_PUBLIC_SANITY_DATASET`
+- `NEXT_PUBLIC_SANITY_API_VERSION`
+
+Redeploy after changing an override. The local value `devplaceholder` explicitly
+disables Sanity for offline development. Studio users still need access to the Sanity
+project, and `https://jmgnest.com` may need to be added to the project's allowed
+origins before they can edit through `/studio`.
 
 ## Environment Variables
 
@@ -290,4 +294,3 @@ This project is private and proprietary.
 ## Support
 
 For questions or support, please contact the development team.
-

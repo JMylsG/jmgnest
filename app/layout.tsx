@@ -48,9 +48,6 @@ export const metadata: Metadata = {
     images: ['https://jmgnest.com/images/og-image.jpg'],
   },
   metadataBase: new URL('https://jmgnest.com'),
-  alternates: {
-    canonical: 'https://jmgnest.com',
-  },
   robots: {
     index: true,
     follow: true,
@@ -130,4 +127,3 @@ export default function RootLayout({
     </html>
   )
 }
-
