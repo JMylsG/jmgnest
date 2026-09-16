@@ -224,7 +224,7 @@ export default function HomePage() {
 
           <div className="bento reveal d1">
             <article className="tile photo big">
-              <img src={`${CLOUD}f_auto,q_auto,w_1400/JMGNest_Sky_View_mx6iqi.png`} alt="JMG Nest property at golden hour above La Trinidad Valley" />
+              <img src="/images/jmgnest-property-sunset.png" alt="JMG Nest exterior and balconies at sunset" loading="lazy" width={1448} height={1086} />
               <div className="tile-label">The Property</div>
               <div className="photo-cap">One quiet building above the valley<small>La Trinidad, Benguet</small></div>
             </article>
