@@ -327,7 +327,7 @@ export default function UnitsClient() {
                     {monthly && <span className="ud-save">{u.save}</span>}
                   </div>
                   <div className="ud-actions">
-                    <Link href={`/booking/${u.id}`} className="btn btn-ghost">Check availability</Link>
+                    <Link prefetch={false} href={`/booking/${u.id}`} className="btn btn-ghost">Check availability</Link>
                     <a href={u.airbnb} target="_blank" rel="noopener noreferrer" className="btn btn-gold">Book on Airbnb <svg className="ic"><use href="#i-arrow-right" /></svg></a>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ export default function UnitsClient() {
                 <span className="ls-save">Save 25%</span>
                 <div><span className="ls-amt">{l.month}</span> <span className="ls-per">/ month</span></div>
                 <p className="ls-eff">{l.eff} · <s>{l.was}</s></p>
-                <Link href="/contact" className="btn btn-gold btn-block">Enquire for a month <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+                <Link prefetch={false} href="/contact" className="btn btn-gold btn-block">Enquire for a month <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
               </article>
             ))}
           </div>
@@ -362,7 +362,7 @@ export default function UnitsClient() {
             <span className="ls-note"><svg className="ic"><use href="#i-wifi" /></svg> WiFi and utilities included</span>
             <span className="ls-note"><svg className="ic"><use href="#i-mountain" /></svg> Ideal for remote work and slow travel</span>
           </div>
-          <div className="ls-cta reveal d3"><Link href="/contact" className="btn btn-gold">Plan a long stay <svg className="ic"><use href="#i-arrow-right" /></svg></Link></div>
+          <div className="ls-cta reveal d3"><Link prefetch={false} href="/contact" className="btn btn-gold">Plan a long stay <svg className="ic"><use href="#i-arrow-right" /></svg></Link></div>
         </div>
       </section>
 

@@ -158,7 +158,7 @@ export default function ThingsToDoClient() {
                     <div className="act-meta"><span><svg className="ic"><use href="#i-clock" /></svg>{a.time}</span></div>
                     <div className="act-actions">
                       <a className="act-cta" href={mapUrl(a)} target="_blank" rel="noopener noreferrer" aria-label={`Get directions to ${a.name}`}>Get directions <svg className="ic"><use href="#i-arrow-right" /></svg></a>
-                      <Link className="act-cta act-guide" href={`/things-to-do/${slugify(a.name)}`} aria-label={`Read the guide for ${a.name}`}>Read guide <svg className="ic"><use href="#i-book" /></svg></Link>
+                      <Link prefetch={false} className="act-cta act-guide" href={`/things-to-do/${slugify(a.name)}`} aria-label={`Read the guide for ${a.name}`}>Read guide <svg className="ic"><use href="#i-book" /></svg></Link>
                     </div>
                   </div>
                 </article>
@@ -233,8 +233,8 @@ export default function ThingsToDoClient() {
           <h2 className="display h2">Make the nest your base camp</h2>
           <p className="lead">Everything worth seeing is a short drive from your door. Pick the unit that fits your group and settle in above the La Trinidad valley, fifteen minutes from Baguio City.</p>
           <div className="t-cta-actions">
-            <Link href="/booking#book" className="btn btn-gold">Check availability <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
-            <Link href="/booking" className="btn btn-ghost">View all units <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+            <Link prefetch={false} href="/booking#book" className="btn btn-gold">Check availability <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+            <Link prefetch={false} href="/booking" className="btn btn-ghost">View all units <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
           </div>
         </div>
       </section>

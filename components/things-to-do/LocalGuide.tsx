@@ -14,7 +14,7 @@ export default function LocalGuideArticle({ guide }: { guide: LocalGuide }) {
         </div>
         <div className="ghd-scrim" />
         <div className="ghd-inner">
-          <Link href="/things-to-do" className="gd-back"><svg className="ic"><use href="#i-chevron-left" /></svg> Back to Things to Do</Link>
+          <Link prefetch={false} href="/things-to-do" className="gd-back"><svg className="ic"><use href="#i-chevron-left" /></svg> Back to Things to Do</Link>
           <p className="eyebrow" style={{ color: '#C49863' }}>{guide.eyebrow}</p>
           <h1 className="gd-title">{guide.title}</h1>
           <p className="gd-lead-hero">{guide.lead}</p>
@@ -65,7 +65,7 @@ export default function LocalGuideArticle({ guide }: { guide: LocalGuide }) {
 
             <div className="gd-cta">
               <a className="btn btn-gold" href={guide.mapUrl} target="_blank" rel="noopener noreferrer">Get directions <svg className="ic"><use href="#i-arrow-right" /></svg></a>
-              <Link className="btn btn-ghost" href="/things-to-do">Back to Things to Do <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+              <Link prefetch={false} className="btn btn-ghost" href="/things-to-do">Back to Things to Do <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
             </div>
           </article>
         </div>

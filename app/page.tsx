@@ -108,7 +108,7 @@ export default function HomePage() {
             <span className="qb-dot">·</span>
             <a href="https://share.google/cyfHPtWGkfgqE5qzk" className="qb-src" target="_blank" rel="noopener noreferrer"><svg className="ic ic-fill"><use href="#i-google" /></svg> 5.0 on Google</a>
           </div>
-          <Link href="/reviews" className="qb-readall">Read all reviews <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+          <Link prefetch={false} href="/reviews" className="qb-readall">Read all reviews <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
         </div>
       </section>
 
@@ -135,7 +135,7 @@ export default function HomePage() {
                   <span><svg className="ic"><use href="#i-bath" /></svg> 2 Baths</span>
                 </div>
                 <div className="lib-price"><span className="from">From</span><span className="amt">₱12,500</span><span className="per">/ night</span></div>
-                <Link href="/booking/main-unit" className="btn btn-gold">Book this unit <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+                <Link prefetch={false} href="/booking/main-unit" className="btn btn-gold">Book this unit <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
               </div>
             </article>
             <article className="lib-panel">
@@ -152,7 +152,7 @@ export default function HomePage() {
                   <span><svg className="ic"><use href="#i-bath" /></svg> 1 Bath</span>
                 </div>
                 <div className="lib-price"><span className="from">From</span><span className="amt">₱5,250</span><span className="per">/ night</span></div>
-                <Link href="/booking/unit-a" className="btn btn-gold">Book this unit <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+                <Link prefetch={false} href="/booking/unit-a" className="btn btn-gold">Book this unit <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
               </div>
             </article>
             <article className="lib-panel">
@@ -168,7 +168,7 @@ export default function HomePage() {
                   <span><svg className="ic"><use href="#i-bath" /></svg> 2 Baths</span>
                 </div>
                 <div className="lib-price"><span className="from">From</span><span className="amt">₱6,250</span><span className="per">/ night</span></div>
-                <Link href="/booking/unit-b" className="btn btn-gold">Book this unit <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+                <Link prefetch={false} href="/booking/unit-b" className="btn btn-gold">Book this unit <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
               </div>
             </article>
             <article className="lib-panel">
@@ -182,7 +182,7 @@ export default function HomePage() {
               </div>
             </article>
           </div>
-          <div className="center-cta reveal"><Link href="/booking" className="btn btn-ghost">Compare all units <svg className="ic"><use href="#i-arrow-right" /></svg></Link></div>
+          <div className="center-cta reveal"><Link prefetch={false} href="/booking" className="btn btn-ghost">Compare all units <svg className="ic"><use href="#i-arrow-right" /></svg></Link></div>
         </div>
       </section>
 
@@ -204,7 +204,7 @@ export default function HomePage() {
             <div className="amenity reveal d4"><span className="tag">Main Unit</span><div className="ico"><svg className="ic"><use href="#i-mountain" /></svg></div><h4>Mountain View Balcony</h4><p>Stunning valley scenery.</p></div>
             <div className="amenity reveal d4" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', background: 'transparent', borderStyle: 'dashed' }}>
               <p style={{ color: 'var(--muted)', fontSize: '.85rem', marginBottom: '14px' }}>Some amenities are exclusive to specific units.</p>
-              <Link href="/booking" className="btn-text">See amenities by unit <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+              <Link prefetch={false} href="/booking" className="btn-text">See amenities by unit <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
             </div>
           </div>
         </div>
@@ -219,7 +219,7 @@ export default function HomePage() {
               <h2 className="display h2">Welcome to JMG Nest</h2>
               <p>Nestled in the heart of La Trinidad Valley, just 15 minutes from Baguio City, JMG Nest is three thoughtfully designed units that blend modern comfort with the natural charm of the mountains. From the moment you arrive, you feel the warm, family hospitality that makes the place ours.</p>
             </div>
-            <Link href="/about" className="btn btn-gold">Learn more about us <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+            <Link prefetch={false} href="/about" className="btn btn-gold">Learn more about us <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
           </div>
 
           <div className="bento reveal d1">
@@ -292,19 +292,19 @@ export default function HomePage() {
               <div className="cico"><svg className="ic ic-fill"><use href="#i-sparkle" /></svg></div>
               <h3>The Star of the Property</h3>
               <p>The Main Unit is made for large families, with the best views of the La Trinidad valley and the most room to gather.</p>
-              <Link href="/booking/main-unit" className="btn-text">View Main Unit <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+              <Link prefetch={false} href="/booking/main-unit" className="btn-text">View Main Unit <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
             </div>
             <div className="choose reveal d2">
               <div className="cico"><svg className="ic"><use href="#i-house" /></svg></div>
               <h3>Spacious &amp; Versatile</h3>
               <p>Units A and B offer generous rooms for couples, small families, or anyone who wants comfort with a bit more flexibility.</p>
-              <Link href="/booking" className="btn-text">View Units A &amp; B <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+              <Link prefetch={false} href="/booking" className="btn-text">View Units A &amp; B <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
             </div>
             <div className="choose reveal d3">
               <div className="cico"><svg className="ic ic-fill"><use href="#i-celebrate" /></svg></div>
               <h3>For Special Events</h3>
               <p>Book the function hall to host your celebration in one beautiful property, with space for everyone.</p>
-              <Link href="/contact" className="btn-text">Contact us <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+              <Link prefetch={false} href="/contact" className="btn-text">Contact us <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
             </div>
           </div>
         </div>
@@ -332,7 +332,7 @@ export default function HomePage() {
               <div className="attraction"><div className="a-ic"><svg className="ic"><use href="#i-tree" /></svg></div><div><h4>Burnham Park</h4><p>Boating, biking, and picnic grounds</p></div><span className="a-time">20 min</span></div>
               <div className="attraction"><div className="a-ic"><svg className="ic"><use href="#i-bag" /></svg></div><div><h4>SM Baguio</h4><p>Shopping, dining, cinema, and groceries</p></div><span className="a-time">25 min</span></div>
               <div className="attraction"><div className="a-ic"><svg className="ic"><use href="#i-mountain" /></svg></div><div><h4>Mines View Park</h4><p>Panoramic views of the mountain ranges</p></div><span className="a-time">35 min</span></div>
-              <Link href="/things-to-do" className="btn btn-ghost btn-block">Explore all local attractions <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+              <Link prefetch={false} href="/things-to-do" className="btn btn-ghost btn-block">Explore all local attractions <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
             </div>
           </div>
         </div>
@@ -347,8 +347,8 @@ export default function HomePage() {
           <h2 className="display h2 reveal d1">Ready to choose your perfect space?</h2>
           <p className="lead reveal d2">Three spaces in one quiet property above La Trinidad, minutes from Baguio City. Choose yours, pick your dates, and settle in.</p>
           <div className="row reveal d3">
-            <Link href="/booking" className="btn btn-gold">View all units <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
-            <Link href="/booking" className="btn btn-ghost">Check availability</Link>
+            <Link prefetch={false} href="/booking" className="btn btn-gold">View all units <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+            <Link prefetch={false} href="/booking" className="btn btn-ghost">Check availability</Link>
           </div>
         </div>
       </section>
@@ -356,7 +356,7 @@ export default function HomePage() {
       {/* ============ MOBILE BOOKING DOCK ============ */}
       <div className="book-dock dark">
         <div className="bd-price"><span className="from">From</span> <strong>₱5,250</strong> <span className="per">/ night</span></div>
-        <Link href="/booking" className="btn btn-gold">Check availability <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
+        <Link prefetch={false} href="/booking" className="btn btn-gold">Check availability <svg className="ic"><use href="#i-arrow-right" /></svg></Link>
       </div>
     </div>
   )
